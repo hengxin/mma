@@ -1,0 +1,304 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10463,        295]
+NotebookOptionsPosition[      9660,        263]
+NotebookOutlinePosition[      9995,        278]
+CellTagsIndexPosition[      9952,        275]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Average Read Latency Comparison", "Title",
+ CellChangeTimes->{{3.6653071825168047`*^9, 3.665307218532015*^9}}],
+
+Cell["Atomicity vs. 2-Atomicity", "Subtitle",
+ CellChangeTimes->{{3.665307229796959*^9, 3.66530723877313*^9}}],
+
+Cell["2016-02-24\t\thengxin0912@gmail.com", "Subsubtitle",
+ CellChangeTimes->{{3.665307244701317*^9, 3.6653072908844347`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"quantileMean", "[", 
+    RowBox[{"file_String", ",", "quantile_Integer"}], "]"}], ":=", " ", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"data", " ", "=", " ", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Import", "[", 
+         RowBox[{"file", ",", "\"\<Data\>\""}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"q", "=", 
+       RowBox[{"Quantile", "[", 
+        RowBox[{"data", ",", 
+         RowBox[{"quantile", "/", "100"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"mean", " ", "=", " ", 
+       RowBox[{"N", "[", 
+        RowBox[{"Mean", "[", 
+         RowBox[{"Select", "[", 
+          RowBox[{"data", ",", 
+           RowBox[{
+            RowBox[{"#", "<", "q"}], "&"}]}], "]"}], "]"}], "]"}]}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.665356032192443*^9, 3.665356122405202*^9}, {
+   3.66535627080457*^9, 3.665356503163764*^9}, 3.665356615747366*^9, 
+   3.665357383407393*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"quantileMeanCompare", "[", 
+    RowBox[{"file_String", ",", "quantile_Integer"}], "]"}], ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "dir", "=", 
+        "\"\<mma-projects/2am/SWMR-atomicity-latency-processed/\>\""}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "dir2", "=", 
+        "\"\<mma-projects/2am/SWMR-2atomicity-latency-processed/\>\""}], ",", 
+       "\[IndentingNewLine]", "qMean", ",", "qMean2", ",", "ratio"}], "}"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"qMean", "=", 
+       RowBox[{"quantileMean", "[", 
+        RowBox[{
+         RowBox[{"dir", "<>", "file"}], ",", "quantile"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"qMean2", "=", 
+       RowBox[{"quantileMean", "[", 
+        RowBox[{
+         RowBox[{"dir2", "<>", "file"}], ",", " ", "quantile"}], "]"}]}], ";",
+       "\[IndentingNewLine]", 
+      RowBox[{"ratio", "=", 
+       RowBox[{"N", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"qMean", "-", "qMean2"}], ")"}], "/", "qMean"}], 
+        "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.665356789918366*^9, 3.665357142456609*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"quantileMeanComparator", "[", "quantile_Integer", "]"}], ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "indices", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"indices", "=", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"i", ",", "j"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "5", ",", "10", ",", "20", ",", "50", ",", "100", ",", "200"}], 
+              "}"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", 
+             RowBox[{"{", 
+              RowBox[{"2", ",", "3", ",", "4", ",", "5"}], "}"}]}], "}"}]}], 
+          "]"}], ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"TableForm", "[", 
+       RowBox[{"Partition", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"quantileMeanCompare", "[", 
+            RowBox[{
+             RowBox[{"\"\<rate\>\"", "<>", 
+              RowBox[{"IntegerString", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+              "\"\<replica\>\"", "<>", 
+              RowBox[{"IntegerString", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", 
+              "\"\<delay.txt\>\""}], ",", "quantile"}], "]"}], "&"}], "/@", 
+          "indices"}], ",", "4"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.665358362394431*^9, 3.665358490335082*^9}, {
+   3.6653586098543053`*^9, 3.665358613150069*^9}, 3.665359139147573*^9, {
+   3.665359291073886*^9, 3.6653593779784203`*^9}, 3.665359410379327*^9, {
+   3.665359509027115*^9, 3.665359575177867*^9}, {3.665359927737176*^9, 
+   3.665359946000457*^9}, {3.665360001344863*^9, 3.6653600092806187`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"quantileMeanComparator", "[", "99", "]"}]], "Input",
+ CellChangeTimes->{{3.665359420896336*^9, 3.665359431169724*^9}, {
+  3.665359655913506*^9, 3.665359659705534*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0.1893135148237081`", "0.38520400686191814`", "0.23977126197466261`", 
+     "0.34582388727202806`"},
+    {"0.10834259922018986`", "0.4435331391779399`", "0.21324482582408985`", 
+     "0.31926834787590064`"},
+    {"0.12214895087519931`", "0.43210584404753677`", "0.23055716755388672`", 
+     "0.3035314170436257`"},
+    {"0.12816231395683325`", "0.4416201429372804`", "0.2466685066627698`", 
+     "0.2836907693860617`"},
+    {"0.1263010604482873`", "0.44611949962202735`", "0.21561805135742734`", 
+     "0.3110396104277135`"},
+    {"0.11331579713204472`", "0.4326903463205545`", "0.23269453973637982`", 
+     "0.26189850159272604`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.665359432379098*^9, 3.665359613257773*^9, 
+  3.665359692739951*^9, 3.665359986433035*^9, 3.665360150170713*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"quantileMeanComparator", "[", "95", "]"}]], "Input",
+ CellChangeTimes->{{3.665360382974237*^9, 3.665360383238143*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0.1904525235696473`", "0.38631407827974706`", "0.24296336952847566`", 
+     "0.3445030909469395`"},
+    {"0.09944882752802119`", "0.4462537716890391`", "0.21224517321068406`", 
+     "0.3183398589351371`"},
+    {"0.11110790190652081`", "0.4310113076083253`", "0.22636775386460706`", 
+     "0.3048990206971111`"},
+    {"0.1174701543088445`", "0.43929955672328996`", "0.24237968374835764`", 
+     "0.28461853230923645`"},
+    {"0.1149406069192526`", "0.4334058794422759`", "0.2149301128698856`", 
+     "0.30614453348687093`"},
+    {"0.10102526764892081`", "0.4319206384046017`", "0.22778288836959537`", 
+     "0.2620566920390201`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.6653604164300747`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"quantileMeanComparator", "[", "75", "]"}]], "Input",
+ CellChangeTimes->{{3.6653606009650307`*^9, 3.6653606019327803`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0.18314276462997897`", "0.39856999050848696`", "0.2526308655997408`", 
+     "0.3442720225050755`"},
+    {"0.06353208580093837`", "0.43342723818466145`", "0.2015784628281498`", 
+     "0.32477186118968715`"},
+    {"0.06648560289545266`", "0.42670661552157085`", "0.22213288522642005`", 
+     "0.29809111046929265`"},
+    {"0.07130173963895581`", "0.4376000084790207`", "0.23546726104879007`", 
+     "0.28483781695650506`"},
+    {"0.07931457770386892`", "0.43127986321070894`", "0.21337714300223293`", 
+     "0.30391205264910465`"},
+    {"0.06841519704979016`", "0.4328442173809312`", "0.22001451678200845`", 
+     "0.26555897806740375`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.665360635546583*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{960, 1016},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Linux x86 (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 116, 1, 93, "Title"],
+Cell[699, 25, 110, 1, 51, "Subtitle"],
+Cell[812, 28, 126, 1, 30, "Subsubtitle"],
+Cell[941, 31, 1132, 30, 143, "Input"],
+Cell[2076, 63, 1310, 36, 187, "Input"],
+Cell[3389, 101, 2013, 49, 187, "Input"],
+Cell[CellGroupData[{
+Cell[5427, 154, 191, 3, 32, "Input"],
+Cell[5621, 159, 1274, 28, 128, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6932, 192, 142, 2, 32, "Input"],
+Cell[7077, 196, 1182, 27, 128, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8296, 228, 146, 2, 32, "Input"],
+Cell[8445, 232, 1187, 27, 185, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

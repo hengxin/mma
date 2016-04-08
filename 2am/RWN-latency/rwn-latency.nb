@@ -1,0 +1,29 @@
+Average Read Latency Comparison
+2AM vs. RWN (2-Atomicity vs. Eventual Consistency)
+2016-04-06		hengxin0912@gmail.com
+1. Read Latency Extractor
+2016-04-06
+latencyDir="~/mma-projects/2am/RWN-latency/";
+rawLatencyDataRelativeDir = "rwn-latency-raw-data/";
+readLatencyDataRelativeDir="rwn-read-latency-data/";
+SetDirectory[latencyDir<>rawLatencyDataRelativeDir];
+Directory[];
+FileNames[]
+data = Import[latencyDir<>rawLatencyDataRelativeDir<>"1+1less3-delay.txt","Table"];
+readLatencyData=#[[2]]&/@Select[data,First[#]==1&];
+q99=Quantile[readLatencyData,99/100];
+mean=N[Mean[Select[readLatencyData,#<q99&]]]
+dataImport[file_String]:=
+Module[{data},
+data=Select[Import[file,"Table"],First[#]==1&][[All,2]]
+];
+quantileMean[data_List,quantile_Integer]:= 
+Module[{q,mean},
+q=Quantile[data,quantile/100];
+mean = N[Mean[Select[data,#<q&]]]
+];
+quantileMean[dataImport[latencyDir<>rawLatencyDataRelativeDir<>#],99]&/@FileNames[]
+quantiles[data_List]:=
+Module[{},
+Quantile[]
+];
