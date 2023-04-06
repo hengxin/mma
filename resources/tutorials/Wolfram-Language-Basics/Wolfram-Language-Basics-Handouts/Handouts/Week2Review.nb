@@ -1,0 +1,4018 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    160961,       4010]
+NotebookOptionsPosition[    132473,       3591]
+NotebookOutlinePosition[    139682,       3712]
+CellTagsIndexPosition[    139517,       3705]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Wolfram Language Basics: Week 2 Review", "Title",
+ CellChangeTimes->{{3.822686597947253*^9, 3.8226866350790854`*^9}, 
+   3.82328687512661*^9},ExpressionUUID->"d2fea56d-e957-400d-8c1a-\
+8b21c29ba733"],
+
+Cell["Friday, Feb 26 2021", "Subtitle",
+ CellChangeTimes->{{3.822686607171834*^9, 3.822686618634903*^9}, {
+  3.823286869397416*^9, 
+  3.8232868697229433`*^9}},ExpressionUUID->"e240833b-dbae-4dd2-b8a2-\
+725ab3ddcd86"],
+
+Cell[CellGroupData[{
+
+Cell["Requests for Review", "Section",
+ CellChangeTimes->{{3.8226805976122828`*^9, 
+  3.8226806134276047`*^9}},ExpressionUUID->"15c87847-3d0f-44b9-b648-\
+d13708da8600"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"functions\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.18087855297157623`],
+     FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"data\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.16149870801033592`],
+     FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {-9., -60.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Programming\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[1, 0.75, 0]], {0., 52.}, Center, Automatic], InsetBox[
+    StyleBox["\<\"Calculations\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {0., 79.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Wolfram\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {0., -102.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Thank\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {7., 106.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"NIntegrate\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[0.5407932311309059, 0.715, 0.09762679674248334]], {114., -40.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"really\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[0.571589, 0.586483, 0.]], {105., -69.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"equations\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {0., -125.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"questions\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[0.47401116530937026`, 0.47809330081437784`, 0.85]], {-78., 104.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"like\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08397932816537468],
+     FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {-116., -48.}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"None\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {0., 133.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"know\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {89., 100.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"need\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {129., 37.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"question\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.8857244243136628, 0.3764133635295058, 0.1393110607841571]], {101., -95.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"example\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {-102., -97.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Machine\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {128., 70.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Working\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.8613800418100862, 0.48092002787339083`, 0.02824203762907758]], {-134., 51.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Pure\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06459948320413438],
+     FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {-119., 80.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"learning\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {-124., -74.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"AssociationThread\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.7513196300394465, 0.358, 0.48066210763162087`]], {0., -143.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"review\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.9874666782805795, 0.6948333914028977, 0.033839968642435214`]], {-70., 125.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"neural\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.6753413537738198, 0.3589675436319385, 0.5991466155654507]], {72., 124.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"messy\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.9324333565611593, 0.5282889043741062, 0.0921900209050434]], {80., -121.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"linear\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {-77., -121.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Right\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[0.7748409210981391, 0.358, 0.4444755060028629]], {0., 156.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"approximating\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.6536293927965667, 0.37163285420200276`, 0.6534265180085832]], {0., -157.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"large\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {62., 145.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"communicate\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.38354466123747527`, 0.5323732032575149, 0.85]], {-75., 143.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"encountered\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9840111653093676, 0.677555826546838, 0.04316985366470745]], {-89., -137.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"associations\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9784200278733908, 0.649600139366954, 0.058265924741844846`]], {88., -141.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"conferences\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.7277983389807635, 0.358, 0.5168487092603637]], {-61., 157.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tech\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.16397784358994957`, 0.7038177251280403, 0.6117734123079395]], {-68., -157.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"emphasized\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.4567336004533182, 0.4884598397280091, 0.85]], {75., -155.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"certification\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8745421494417032, 0.39318677583744527`, 0.11135537360425793`]], {60., 164.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"developers\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.9307395679624266, 0.7498043964402695, 0.]], {-137., -113.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"application\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9052934053395919, 0.510195603559728, 0.06776406480563275]], {-132., 119.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"arguments\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.6361597700445392, 0.7170733077827265, 0.]], {-110., 31.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"enjoyment\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.7658565873730018, 0.358, 0.4582975578876895]], {134., 118.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"discussion\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.922066817647527, 0.5213778784316846, 0.08286013588277422]], {144., -111.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"differential\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8335801463353031, 0.3487839707329394, 0.3481997561078282]], {118., 143.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"datapoints\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.845266573755366, 0.437100139366951, 0.03816643438841502]], {143., -125.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Advanced\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.7132613816472081, 0.358, 0.5392132590042952]], {-118., -151.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"beginners\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.8493197142977551, 0.7407577460330839, 0.]], {94., -168.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Analyzing\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.5472001045252132, 0.43417993728487203`, 0.85]], {-142., 135.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"afternoon\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.37977756485605163`, 0.715, 0.3025558265468435]], {121., 157.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"formulate\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.529922539669161, 0.44454647619850335`, 0.85]], {-124., 155.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"analytical\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8564488486273256, 0.42032672705901153`, 0.06612212156831418]], {-116., -165.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"complete\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.969373377466199, 0.6043668873309952, 0.08269188084126262]], {137., -153.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"excellent\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.6102054708420535, 0.39696347534213544`, 0.7619863228948663]], {149., 89.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Evaluate\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8510135028964549, 0.47400900193096995`, 0.018912152606809424`]], {4., -171.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"beginner\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.596786740995709, 0.404791067752503, 0.7955331475107271]], {7., 176.}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"attended\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8342400905885153, 0.4628267270590103, 0.0038160815296638794`]], {-51., 171.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"cleaning\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.19193353076984873`, 0.681453175384121, 0.6453202369238185]], {-46., -173.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"catching\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.47929071933511125`, 0.715, 0.1759027208462221]], {64., 178.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"difficulty\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.26512246998569167`, 0.6229020240114467, 0.73314696398283]], {160., 102.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"1145am\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.6184987019729621, 0.39212575718243875`, 0.7412532450675947]], {-154., 102.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"element\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8926354502560807, 0.366046824615879, 0.15658862564020168`]], {-100., 169.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"certified\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.5019668524892619, 0.46131988850644284`, 0.85]], {-148., -129.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Burgers\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9492067688690977, 0.5394711792460651, 0.10728609198218791`]], {117., 171.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Artificial\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.428777913273419, 0.5052332520359486, 0.85]], {-146., 168.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"experts\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8774935098648088, 0.34000129802703827`, 0.2750108168919853]], {51., 33.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"chance\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9930578157165594, 0.7227890785827968, 0.01874389756528967]], {164., -72.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"display\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.6670481226429111, 0.3638052617916352, 0.6198796933927223]], {165., -56.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"lot\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {-159., -38.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"getting\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8064401951137368, 0.3542119609772526, 0.39343300814377197`]], {164., -86.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"expect\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.7989994773739094, 0.735166608597101, 0.]], {-166., -53.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"common\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9046334610863751, 0.334573307782725, 0.22977756485604156`]], {119., 54.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"attend\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.2187618985811806, 0.715, 0.5074848563512248]], {-163., -90.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Anshu\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.9810598048862722, 0.7553955338762525, 0.]], {164., 131.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"custom\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.31827505306025683`, 0.715, 0.3808317506505822]], {-92., -178.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Fitting\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8633598745697435, 0.40996018814538476`, 0.08339968642435877]], {164., -139.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"GPUs\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.6672593867853922, 0.7205288207539324, 0.]], {-165., -143.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"faster\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9603267270590103, 0.5591336352950514, 0.10711783694067224`]], {141., -167.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"codes\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.6319174318193065, 0.38429816477207124`, 0.7077064204517338]], {165., 145.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"future\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9986489531525362, 0.7507447657626809, 0.0036478264881522893`]], {48., -178.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"answer\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8168067340273636, 0.3521386531945273, 0.3761554432877274]], {107., -180.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"going\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8949268664259606, 0.5032845776173072, 0.05843417978336459]], {-168., 72.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"camp\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.6897400905885174, 0.358, 0.5753998606330502]], {-168., 86.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"given\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.2198892179497479, 0.6590886256402017, 0.6788670615396974]], {-167., 149.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"detail\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.5750747800184488, 0.4174563783225715, 0.8498130499538777]], {-164., -157.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"array\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9038177251280404, 0.3492734123079395, 0.18454431282010084`]], {-130., -178.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"good\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.6453361616656581, 0.37647057236169945`, 0.6741595958358548]], {164., 159.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"class\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.7896667828057927, 0.3575666434388414, 0.4213886953236787]], {156., 171.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"2012\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.7678998606330495, 0.7317110956258943, 0.]], {-161., -171.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"code\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8781534541180211, 0.4921023027453475, 0.04333810870621905]], {164., -178.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"finite\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.7042770479220728, 0.358, 0.5530353108891188]], {-60., 31.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"bible\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8607200975568693, 0.34335598048862614`, 0.30296650407188447`]], {178., 29.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"5000\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.35558897405758294`, 0.5505288207539337, 0.8417067688690995]], {0., -184.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"boot\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.3103557220216354, 0.5867154223826917, 0.7874268664259625]], {179., -32.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"come\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.7175796237092107, 0.7261199581899123, 0.]], {-35., 185.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"grid\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9107287510704583, 0.33890687339431275`, 0.20182187767614543`]], {175., 45.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"app\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.23716678280579248`, 0.645266573755366, 0.699600139366951]], {-182., 0.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"error\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.15725938678540247`, 0.715, 0.5857607804549424]], {5., 189.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"fast\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.3383114092015346, 0.5643508726387724, 0.8209736910418415]], {-181., -15.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"3\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04521963824289406],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {56., -1.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"earn\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.5788038738141875, 0.715, 0.049249615145579635`]], {-30., -187.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"fit\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[0.4177882075393331, 0.715, 0.25417864494993975`]], {-29., 0.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"6\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.9637822400302223, 0.5764112001511111, 0.0977879519184]], {-9., -27.}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"4\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.02583979328165375],
+     FontColor->RGBColor[
+      0.8878600487784333, 0.33792799024431336`, 0.2577332520359445]], {-11., 30.},
+     Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic},
+  PlotRange->{{-194.5, 192.5}, {-193.5, 195.5}}]], "Input",
+ CellChangeTimes->{
+  3.82328687812392*^9},ExpressionUUID->"8fde8578-6140-4fe4-a559-d7956d4014fb"],
+
+Cell[CellGroupData[{
+
+Cell["Verbs", "Subsection",
+ CellChangeTimes->{{3.823286975431525*^9, 3.8232869760009937`*^9}, 
+   3.82328702877225*^9},ExpressionUUID->"9784b055-2fa0-421b-98d6-\
+58346cd9386c"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"have\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.24221453287197234`],
+     FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Thank\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10380622837370243`],
+     FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {0., 37.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"know\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10380622837370243`],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {-3., -44.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"need\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10380622837370243`],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {-2., 67.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Working\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {9., -70.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"like\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10380622837370243`],
+     FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {69., -47.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"review\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {-4., 88.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"would\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {-80., -39.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"be\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10380622837370243`],
+     FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {75., 38.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"can\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10380622837370243`],
+     FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {0., -93.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"been\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[1, 0.75, 0]], {-67., -65.}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"approximating\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9324333565611593, 0.5282889043741062, 0.0921900209050434]], {80., 65.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"communicate\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.6184987019729621, 0.39212575718243875`, 0.7412532450675947]], {-81., 62.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"encountered\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8564488486273256, 0.42032672705901153`, 0.06612212156831418]], {-4., 106.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"participating\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.5019668524892619, 0.46131988850644284`, 0.85]], {-67., -84.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"emphasized\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.37977756485605163`, 0.715, 0.3025558265468435]], {74., 79.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"will\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {-61., 78.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"mentioned\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.47929071933511125`, 0.715, 0.1759027208462221]], {60., -91.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"datapoints\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.35558897405758294`, 0.5505288207539337, 0.8417067688690995]], {86., -67.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"presented\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8781534541180211, 0.4921023027453475, 0.04333810870621905]], {6., -112.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"wondered\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8510135028964549, 0.47400900193096995`, 0.018912152606809424`]], {62., 93.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"upcoming\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.5788038738141875, 0.715, 0.049249615145579635`]], {-60., -98.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Analyzing\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {-69., 99.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"'ve\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {-62., 34.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"formulate\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.23716678280579248`, 0.645266573755366, 0.699600139366951]], {62., -105.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"complete\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.7678998606330495, 0.7317110956258943, 0.]], {58., 109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"imported\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.596786740995709, 0.404791067752503, 0.7955331475107271]], {-49., -114.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"attended\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.5407932311309059, 0.715, 0.09762679674248334]], {-66., 113.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"do\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {-106., 0.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"pumping\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.6319174318193065, 0.38429816477207124`, 0.7077064204517338]], {-4., 120.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"interacts\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8607200975568693, 0.34335598048862614`, 0.30296650407188447`]], {-108., 48.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"cleaning\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.16397784358994957`, 0.7038177251280403, 0.6117734123079395]], {1., -126.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"catching\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9874666782805795, 0.6948333914028977, 0.033839968642435214`]], {-104., 76.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"improve\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.8493197142977551, 0.7407577460330839, 0.]], {44., 123.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"certified\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.7748409210981391, 0.358, 0.4444755060028629]], {109., -27.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"become\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8857244243136628, 0.3764133635295058, 0.1393110607841571]], {58., -119.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"'m\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {105., 8.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"missed\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8745421494417032, 0.39318677583744527`, 0.11135537360425793`]], {-112., -18.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"solving\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.5750747800184488, 0.4174563783225715, 0.8498130499538777]], {113., -9.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"getting\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.6536293927965667, 0.37163285420200276`, 0.6534265180085832]], {-111., 19.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"should\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.7277983389807635, 0.358, 0.5168487092603637]], {114., 49.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"please\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9930578157165594, 0.7227890785827968, 0.01874389756528967]], {-113., 33.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"having\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.7513196300394465, 0.358, 0.48066210763162087`]], {110., -81.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"expect\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.5472001045252132, 0.43417993728487203`, 0.85]], {110., 95.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"shown\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.31827505306025683`, 0.715, 0.3808317506505822]], {-49., 126.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"attend\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.6753413537738198, 0.3589675436319385, 0.5991466155654507]], {114., 27.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"timing\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.922066817647527, 0.5213778784316846, 0.08286013588277422]], {115., -41.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"is\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[0.571589, 0.586483, 0.]], {-106., -62.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"answer\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {-46., -128.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"trying\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.6670481226429111, 0.3638052617916352, 0.6198796933927223]], {107., -95.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Solve\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.845266573755366, 0.437100139366951, 0.03816643438841502]], {-106., -98.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"made\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9492067688690977, 0.5394711792460651, 0.10728609198218791`]], {-92., -112.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"going\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.428777913273419, 0.5052332520359486, 0.85]], {-114., 92.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"using\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9840111653093676, 0.677555826546838, 0.04316985366470745]], {-117., -79.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"given\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9038177251280404, 0.3492734123079395, 0.18454431282010084`]], {102., 109.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"'s\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {-123., -37.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"think\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.26512246998569167`, 0.6229020240114467, 0.73314696398283]], {83., 122.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hope\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8342400905885153, 0.4628267270590103, 0.0038160815296638794`]], {-83., -126.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"seems\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.969373377466199, 0.6043668873309952, 0.08269188084126262]], {109., -109.}, \
+Center, Automatic], InsetBox[
+    StyleBox["\<\"used\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.4567336004533182, 0.4884598397280091, 0.85]], {-84., 126.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"does\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9637822400302223, 0.5764112001511111, 0.0977879519184]], {-111., 107.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"plow\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.7896667828057927, 0.3575666434388414, 0.4213886953236787]], {96., -123.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"'ll\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06920415224913495],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {-124., -61.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"view\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.7658565873730018, 0.358, 0.4582975578876895]], {120., -54.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hear\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.2187618985811806, 0.715, 0.5074848563512248]], {112., 121.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Sow\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.9307395679624266, 0.7498043964402695, 0.]], {-112., 121.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"post\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.19193353076984873`, 0.681453175384121, 0.6453202369238185]], {-112., -124.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"may\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.6897400905885174, 0.358, 0.5753998606330502]], {4., 134.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"stay\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8335801463353031, 0.3487839707329394, 0.3481997561078282]], {131., 5.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"look\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.3103557220216354, 0.5867154223826917, 0.7874268664259625]], {38., -133.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"give\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.6361597700445392, 0.7170733077827265, 0.]], {122., 79.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"seem\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.38354466123747527`, 0.5323732032575149, 0.85]], {0., -138.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"come\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8613800418100862, 0.48092002787339083`, 0.02824203762907758]], {-26., 138.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"say\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.7175796237092107, 0.7261199581899123, 0.]], {127., -66.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"has\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9784200278733908, 0.649600139366954, 0.058265924741844846`]], {30., 136.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"find\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.9810598048862722, 0.7553955338762525, 0.]], {53., 135.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"earn\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.7132613816472081, 0.358, 0.5392132590042952]], {65., -131.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"get\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9052934053395919, 0.510195603559728, 0.06776406480563275]], {-132., 0.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"was\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.15725938678540247`, 0.715, 0.5857607804549424]], {77., 136.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"use\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8926354502560807, 0.366046824615879, 0.15658862564020168`]], {-131., 62.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"see\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.9046334610863751, 0.334573307782725, 0.22977756485604156`]], {132., 63.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"fit\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8168067340273636, 0.3521386531945273, 0.3761554432877274]], {41., -20.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"'d\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[
+      0.8878600487784333, 0.33792799024431336`, 0.2577332520359445]], {-69., 0.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"ca\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03460207612456748],
+     FontColor->RGBColor[0.47401116530937026`, 0.47809330081437784`, 0.85]], {-136., -66.},
+     Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic},
+  PlotRange->{{-144.5, 144.5}, {-144.5, 144.5}}]], "Input",ExpressionUUID->\
+"eb4a7645-5eb7-4b41-8d32-c39ac9ad8dd3"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Nouns", "Subsection",
+ CellChangeTimes->{{3.823287003361607*^9, 
+  3.8232870054459467`*^9}},ExpressionUUID->"5d6cdf7c-af80-4b9d-b8c7-\
+ab9287fbdc40"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"functions\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.19830028328611898`],
+     FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"data\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.17705382436260625`],
+     FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {-9., -60.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Calculations\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0708215297450425],
+     FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {0., 53.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Programming\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {0., 78.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"something\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {0., -97.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"NIntegrate\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.571589, 0.586483, 0.]], {0., 99.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"equations\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {110., -38.}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"questions\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {0., -118.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"None\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0708215297450425],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {15., 121.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"question\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {105., -59.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"example\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {-124., -38.}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"Machine\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {108., 71.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"learning\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {126., 38.}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"today\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {-113., 37.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"preconference\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.969373377466199, 0.6043668873309952, 0.08269188084126262]], {93., -90.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Minimization\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.6897400905885174, 0.358, 0.5753998606330502]], {-42., 32.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"associations\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.6753413537738198, 0.3589675436319385, 0.5991466155654507]], {-102., 76.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"conferences\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.35558897405758294`, 0.5505288207539337, 0.8417067688690995]], {-87., -91.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"suggestions\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8510135028964549, 0.47400900193096995`, 0.018912152606809424`]], {87., 93.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"integrations\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8342400905885153, 0.4628267270590103, 0.0038160815296638794`]], {-86., 97.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"certification\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.16397784358994957`, 0.7038177251280403, 0.6117734123079395]], {-55., 118.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"screenshot\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.6670481226429111, 0.3638052617916352, 0.6198796933927223]], {-118., 56.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"developers\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.37977756485605163`, 0.715, 0.3025558265468435]], {-118., -56.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"application\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {83., -104.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"arguments\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {2., -132.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Shorthand\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.4567336004533182, 0.4884598397280091, 0.85]], {-81., -105.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"recordings\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.26512246998569167`, 0.6229020240114467, 0.73314696398283]], {-115., -72.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"notebooks\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.19193353076984873`, 0.681453175384121, 0.6453202369238185]], {83., 107.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"enjoyment\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.23716678280579248`, 0.645266573755366, 0.699600139366951]], {-79., -119.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"discussion\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.5472001045252132, 0.43417993728487203`, 0.85]], {31., 138.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"beginners\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8857244243136628, 0.3764133635295058, 0.1393110607841571]], {78., -118.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"reference\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.922066817647527, 0.5213778784316846, 0.08286013588277422]], {118., -75.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"operators\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8781534541180211, 0.4921023027453475, 0.04333810870621905]], {-51., 133.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"afternoon\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {57., 32.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"recording\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8335801463353031, 0.3487839707329394, 0.3481997561078282]], {0., -146.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"overview\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7175796237092107, 0.7261199581899123, 0.]], {79., 120.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"NDSolve\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.5019668524892619, 0.46131988850644284`, 0.85]], {59., -134.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"beginner\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.5407932311309059, 0.715, 0.09762679674248334]], {-55., -136.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"structures\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7658565873730018, 0.358, 0.4582975578876895]], {-29., 146.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Mapping\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8607200975568693, 0.34335598048862614`, 0.30296650407188447`]], {32., 152.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"program\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.31827505306025683`, 0.715, 0.3808317506505822]], {52., -146.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"handling\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.428777913273419, 0.5052332520359486, 0.85]], {-113., 111.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"systems\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.6102054708420535, 0.39696347534213544`, 0.7619863228948663]], {-3., -159.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"difficulty\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8564488486273256, 0.42032672705901153`, 0.06612212156831418]], {85., 134.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"1145am\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {-18., 158.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"element\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8168067340273636, 0.3521386531945273, 0.3761554432877274]], {-55., -150.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"method\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9492067688690977, 0.5394711792460651, 0.10728609198218791`]], {-100., 130.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"interest\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.596786740995709, 0.404791067752503, 0.7955331475107271]], {-80., 145.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"experts\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.6536293927965667, 0.37163285420200276`, 0.6534265180085832]], {45., -160.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"options\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.6319174318193065, 0.38429816477207124`, 0.7077064204517338]], {-141., 88.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"models\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8745421494417032, 0.39318677583744527`, 0.11135537360425793`]], {-144., -86.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"chance\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8613800418100862, 0.48092002787339083`, 0.02824203762907758]], {-102., -133.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"display\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.9810598048862722, 0.7553955338762525, 0.]], {-133., -102.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"lot\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049575070821529746`],
+     FontColor->RGBColor[1, 0.75, 0]], {134., 91.}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"traning\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7042770479220728, 0.358, 0.5530353108891188]], {106., -131.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"portals\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.38354466123747527`, 0.5323732032575149, 0.85]], {134., -103.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Level1\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.8493197142977551, 0.7407577460330839, 0.]], {112., 53.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"weeks\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.2198892179497479, 0.6590886256402017, 0.6788670615396974]], {154., 56.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"custom\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9637822400302223, 0.5764112001511111, 0.0977879519184]], {28., 166.}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"quads\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.5750747800184488, 0.4174563783225715, 0.8498130499538777]], {76., 150.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"needs\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9930578157165594, 0.7227890785827968, 0.01874389756528967]], {-59., 159.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"model\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.47929071933511125`, 0.715, 0.1759027208462221]], {-156., 68.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hobby\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9784200278733908, 0.649600139366954, 0.058265924741844846`]], {-46., -164.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"topics\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.3383114092015346, 0.5643508726387724, 0.8209736910418415]], {131., 112.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"GPUs\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.6361597700445392, 0.7170733077827265, 0.]], {94., -148.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"codes\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8878600487784333, 0.33792799024431336`, 0.2577332520359445]], {-128., -116.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"matter\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.3103557220216354, 0.5867154223826917, 0.7874268664259625]], {131., -117.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"prefix\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7277983389807635, 0.358, 0.5168487092603637]], {-96., -147.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"hours\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7513196300394465, 0.358, 0.48066210763162087`]], {66., 164.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"camp\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7748409210981391, 0.358, 0.4444755060028629]], {151., -87.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"video\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.529922539669161, 0.44454647619850335`, 0.85]], {126., 126.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Reap\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.9307395679624266, 0.7498043964402695, 0.]], {-81., -162.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"detail\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7132613816472081, 0.358, 0.5392132590042952]], {84., -162.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"array\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9324333565611593, 0.5282889043741062, 0.0921900209050434]], {110., 148.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"week\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8064401951137368, 0.3542119609772526, 0.39343300814377197`]], {-154., 101.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tricks\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.4177882075393331, 0.715, 0.25417864494993975`]], {-94., 159.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"suffix\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.15725938678540247`, 0.715, 0.5857607804549424]], {-118., 142.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"quad\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.845266573755366, 0.437100139366951, 0.03816643438841502]], {-160., -70.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"node\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.7896667828057927, 0.3575666434388414, 0.4213886953236787]], {-138., 125.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"class\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.6184987019729621, 0.39212575718243875`, 0.7412532450675947]], {-139., -130.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"code\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7678998606330495, 0.7317110956258943, 0.]], {161., -71.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tools\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8774935098648088, 0.34000129802703827`, 0.2750108168919853]], {98., 164.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"slide\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9840111653093676, 0.677555826546838, 0.04316985366470745]], {141., -131.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"BUT\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9874666782805795, 0.6948333914028977, 0.033839968642435214`]], {161., -54.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tech\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.7989994773739094, 0.735166608597101, 0.]], {-162., 49.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"boot\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.47401116530937026`, 0.47809330081437784`, 0.85]], {161., 84.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"users\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8633598745697435, 0.40996018814538476`, 0.08339968642435877]], {-129., -145.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"way\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9986489531525362, 0.7507447657626809, 0.0036478264881522893`]], {-162., -52.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"grid\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9038177251280404, 0.3492734123079395, 0.18454431282010084`]], {159., 100.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"app\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {124., -145.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"error\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9052934053395919, 0.510195603559728, 0.06776406480563275]], {-113., -161.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"plot\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9046334610863751, 0.334573307782725, 0.22977756485604156`]], {112., -162.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"info\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.2187618985811806, 0.715, 0.5074848563512248]], {-158., -115.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sets\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.8926354502560807, 0.366046824615879, 0.15658862564020168`]], {138., 140.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"tour\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[
+      0.9603267270590103, 0.5591336352950514, 0.10711783694067224`]], {-162., 112.},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"set\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.028328611898016998`],
+     FontColor->RGBColor[0.5788038738141875, 0.715, 0.049249615145579635`]], {-164., -98.},
+     Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Helvetica"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic},
+  PlotRange->{{-176.5, 176.5}, {-172.5, 173.5}}]], "Input",ExpressionUUID->\
+"4c47e6e7-1ba2-4814-aea5-7dabfaac40c4"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Numerics and Symbolics", "Section",
+ CellChangeTimes->{{3.8232870698252573`*^9, 3.823287074176643*^9}, {
+  3.823298968928039*^9, 
+  3.8232989718947287`*^9}},ExpressionUUID->"6b71b0e2-401e-4b3d-b118-\
+741589dea75c"],
+
+Cell["Review next Friday", "Text",
+ CellChangeTimes->{{3.823287078765944*^9, 3.823287081661296*^9}, {
+  3.823298975879781*^9, 
+  3.823298984087186*^9}},ExpressionUUID->"ab5216d8-41aa-405c-bb43-\
+bce2ac6480a6"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Advanced Programming and Working with Data", "Section",
+ CellChangeTimes->{{3.82328710362178*^9, 
+  3.823287113776766*^9}},ExpressionUUID->"94ee4311-f75d-4792-8bbc-\
+4441ccf94b61"],
+
+Cell[CellGroupData[{
+
+Cell["Pure Functions", "Subsection",
+ CellChangeTimes->{{3.823287216602475*^9, 
+  3.823287218881856*^9}},ExpressionUUID->"cea51596-60c3-45ef-b39a-\
+65bb539797de"],
+
+Cell[TextData[{
+ "Pure functions, or \[OpenCurlyDoubleQuote]anonymous\[CloseCurlyDoubleQuote] \
+functions, are functions that are introduced without being named. Pure \
+functions are constructed using ",
+ StyleBox[ButtonBox["Function",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Function"],
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.821680600701915*^9, 3.821680614997723*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"5bc1cf06-701e-4364-b925-7e28c9dadb98"],
+
+Cell["\<\
+Here is a pure function that multiplies its argument by a constant:\
+\>", "CodeText",
+ CellChangeTimes->{{3.8220480322852592`*^9, 3.822048032732916*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"b438c858-1a3b-4905-92d4-03ca1fb46929"],
+
+Cell[BoxData[
+ RowBox[{"Function", "[", 
+  RowBox[{"x", ",", 
+   RowBox[{"10", "x"}]}], "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"bcb711d5-ac96-41a4-a541-a9e4e531057a"],
+
+Cell["\<\
+Pure functions are used by entering them as the head of an expression, just \
+as other functions are used:\
+\>", "CodeText",
+ CellChangeTimes->{{3.822048034015505*^9, 3.822048034476631*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"85897fce-91e3-477e-85bb-cf897ace36e9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Function", "[", 
+   RowBox[{"x", ",", 
+    RowBox[{"10", "x"}]}], "]"}], "[", "3", "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"e4b5d27a-d377-4f91-abc6-51f2ebcf94ff"],
+
+Cell["\<\
+This input represents a pure function that multiplies the argument by a \
+constant:\
+\>", "CodeText",
+ CellChangeTimes->{{3.822048041676902*^9, 3.82204804211559*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"02fa8f5d-37bf-4bbf-84e8-ff2b305107cf"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"10", " ", "#"}], "&"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"9fd37223-f5c0-4b7a-896a-1a99872114d2"],
+
+Cell["\<\
+Both ways of entering the pure function have the same effect. The parentheses \
+are not required but are included here for clarity:\
+\>", "CodeText",
+ CellChangeTimes->{{3.822048045726548*^9, 3.8220480461989737`*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"83293434-3a70-4dbe-aa23-f05ed95a6815"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"10", " ", "#"}], "&"}], ")"}], "[", "3", "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"1abcc931-bb7c-4544-b11e-42f15c9c2992"],
+
+Cell[TextData[{
+ "The notation ",
+ StyleBox["#1, #2, \[Ellipsis] ", "Input"],
+ "can be used for pure functions with more than one argument:"
+}], "CodeText",
+ CellChangeTimes->{{3.8220480484606247`*^9, 3.822048048930525*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"7babde5e-0772-4a25-ab02-9007b2560b34"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"#1", "+", 
+     RowBox[{"#2", " ", "#3"}]}], "&"}], ")"}], "[", 
+  RowBox[{"x", ",", "y", ",", "z"}], "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"5e8afda2-70e1-43cb-b804-41d22da754c8"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Mapping Pure Functions", "Subsection",
+ CellChangeTimes->{{3.823287265877149*^9, 
+  3.823287273391884*^9}},ExpressionUUID->"8a1f1661-0398-49dc-b538-\
+a6dd4de873be"],
+
+Cell[TextData[{
+ "Pure functions are frequently used in conjunction with other functions such \
+as ",
+ StyleBox[ButtonBox["Map",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Map"],
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox[ButtonBox["Apply",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Apply"],
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.8216809711775827`*^9, 3.821680982037613*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"baf554ea-c1e7-440a-a24e-bf9618fc7906"],
+
+Cell["\<\
+This maps the pure function that squares its argument across a list:\
+\>", "CodeText",
+ CellChangeTimes->{{3.82204806808072*^9, 3.822048068586413*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"48960786-c1a6-4a8e-a6a5-067abc301999"],
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "^", "2"}], "&"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "a", ",", "\[Pi]", ",", ".001"}], "}"}]}], 
+  "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"89ba35e4-08ea-4dfa-85ce-fbdd83a2a43f"],
+
+Cell[TextData[{
+ "A pure function is used here to square all those elements of a list that \
+lie between ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"-", "1"}], TraditionalForm]],ExpressionUUID->
+  "9f870165-286b-4774-8ace-efb333f4cd1d"],
+ " and 1:"
+}], "CodeText",
+ CellChangeTimes->{{3.822048069857875*^9, 3.8220480707803297`*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"5ce63587-a16a-402a-b18b-e1fcd0089593"],
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "1"}], "<", "#", "<", "1"}], ",", 
+      SuperscriptBox["#", "2"], ",", "#"}], "]"}], "&"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2.1", ",", 
+     RowBox[{"-", "0.25"}], ",", "1", ",", 
+     RowBox[{"-", "0.01"}], ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"2bc9a776-04d7-4ee5-93f5-e3ea56f9ff6f"],
+
+Cell[TextData[{
+ "Pure functions are also commonly used with functions such as ",
+ StyleBox[ButtonBox["Select",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Select"],
+  FontWeight->"Bold"],
+ " whose second argument should be a predicate function."
+}], "Text",
+ CellChangeTimes->{{3.821680994991814*^9, 3.8216809973046255`*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"da4869d4-c0c7-4165-907b-14639028a659"],
+
+Cell[TextData[{
+ "For example, this selects all those numbers from the list that are greater \
+than ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"-", "50"}], TraditionalForm]],ExpressionUUID->
+  "a25f8d89-b479-4fd4-97af-3c5370e50bfa"],
+ ":"
+}], "CodeText",
+ CellChangeTimes->{{3.822048073851635*^9, 3.822048074346545*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"52d11bf9-ccc8-42e0-a315-d884f152c52d"],
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"100", ",", 
+     RowBox[{"-", "67"}], ",", 
+     RowBox[{"-", "95"}], ",", 
+     RowBox[{"-", "80"}], ",", 
+     RowBox[{"-", "22"}], ",", 
+     RowBox[{"-", "89"}], ",", "23", ",", 
+     RowBox[{"-", "19"}], ",", "25", ",", "100", ",", 
+     RowBox[{"-", "54"}], ",", 
+     RowBox[{"-", "11"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"#", ">", 
+     RowBox[{"-", "50"}]}], "&"}]}], "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"078801d1-997d-4bff-919d-69432a8e1b6b"],
+
+Cell["Here, the list consists of a plot of different functions:", "CodeText",
+ CellChangeTimes->{{3.8220480934376507`*^9, 3.822048093976589*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"30bc2c0e-33a9-4258-8e15-303eed412fee"],
+
+Cell[BoxData[
+ RowBox[{"TabView", "[", "\[IndentingNewLine]", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"#", "[", "x", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", 
+         RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}], "&"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"Sin", ",", "Cos", ",", "Tan"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"132e34c2-13c7-4c59-9609-93bc751796e2"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Pure Functions in Options for Visualizations", "Subsection",
+ CellChangeTimes->{{3.823287225661578*^9, 3.823287233971294*^9}, {
+  3.823288136656637*^9, 
+  3.823288142879839*^9}},ExpressionUUID->"79085928-a0ef-443b-be04-\
+d00ccec9696e"],
+
+Cell[TextData[{
+ "Since there are three variables in a surface, ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "0ade606b-1d09-45e8-b187-585a96030c0e"],
+ ", ",
+ Cell[BoxData[
+  FormBox["y", TraditionalForm]],ExpressionUUID->
+  "745eee54-bc0b-400d-9f01-b3dd94f8782a"],
+ ", and ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]],ExpressionUUID->
+  "5370a174-6fe0-4e46-b826-0ebcad3c8018"],
+ ", you can give any of the three variables as arguments to the mesh, color, \
+and region functions."
+}], "Text",
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"670bd785-5151-4abc-a993-b739edc4a00a"],
+
+Cell[TextData[{
+ "For example, this colors the surface according the third parameter, the \
+height (",
+ StyleBox["#3", "MR"],
+ "). Try changing the ",
+ StyleBox["#3", "MR"],
+ " to ",
+ StyleBox["#1", "MR"],
+ " or ",
+ StyleBox["#2:", "MR"]
+}], "CodeText",
+ CellChangeTimes->{{3.822048099883655*^9, 
+  3.822048100367675*^9}},ExpressionUUID->"9e7c2411-1186-4507-9633-\
+8ec388760a57"],
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   SuperscriptBox["E", 
+    RowBox[{
+     RowBox[{"-", 
+      SuperscriptBox["x", "2"]}], "-", 
+     SuperscriptBox["y", "2"]}]], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"ColorFunction", "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Hue", "[", "#3", "]"}], "&"}], ")"}]}]}], "]"}]], "Input",
+ CellLabel->"",ExpressionUUID->"226ddd08-547d-4a77-8a33-7d59a360b247"],
+
+Cell[TextData[{
+ "The value of the following ",
+ StyleBox[ButtonBox["RegionFunction",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/RegionFunction"],
+  FontWeight->"Bold"],
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "option is a pure function that restricts the contour plot to the annulus \
+defined by ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"1", "<", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}], "<", "8"}], "Input"], TraditionalForm]],
+  ExpressionUUID->"c1a4fb6e-2a23-4483-af7f-758bc17b39df"],
+ ". Here you also specify a style for the boundary:"
+}], "CodeText",
+ CellChangeTimes->{{3.8216812372056065`*^9, 3.821681242442127*^9}, {
+  3.822048109784686*^9, 3.8220481108530912`*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"7d3a43d9-62ca-4276-ab96-13dfbe746268"],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "2"], "-", 
+    SuperscriptBox["y", "2"]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"RegionFunction", "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1", "<", 
+       RowBox[{
+        SuperscriptBox["#1", "2"], "+", 
+        SuperscriptBox["#2", "2"]}], "<", "8"}], "&"}], ")"}]}], ",", 
+   RowBox[{"BoundaryStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Pink", ",", "Thick"}], "}"}]}]}], "]"}]], "Input",
+ CellTags->"Functional Programming",
+ CellLabel->"",ExpressionUUID->"3c86a429-b433-4282-862d-1d0ef190c9f0"],
+
+Cell[TextData[{
+ "The following example gives 10 mesh lines, equally spaced on the vertical \
+axis. Changing the ",
+ StyleBox[ButtonBox["MeshFunctions",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/MeshFunctions"],
+  FontWeight->"Bold"],
+ " value from ",
+ StyleBox["#3", "MR"],
+ " to ",
+ StyleBox["#2", "MR"],
+ " will give meshes along the ",
+ Cell[BoxData[
+  FormBox["y", TraditionalForm]],ExpressionUUID->
+  "f2e8117a-7e76-412d-870a-31618020eeaa"],
+ " axis; changing to ",
+ StyleBox["#1", "MR"],
+ " will give meshes along the ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "d9a60b56-7abd-4156-91b7-692f62d2c9a7"],
+ " axis (",
+ StyleBox["#4", "MR"],
+ " will give radial mesh lines):"
+}], "CodeText",
+ CellChangeTimes->{{3.8216812695075665`*^9, 3.821681275650166*^9}, {
+  3.8220481134069023`*^9, 3.822048113924139*^9}},
+ CellTags->
+  "Functional \
+Programming",ExpressionUUID->"1455d691-9098-4870-b519-05682debb90b"],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"3", "+", 
+        RowBox[{"Cos", "[", "v", "]"}]}], ")"}], " ", 
+      RowBox[{"Sin", "[", "u", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"3", "+", 
+        RowBox[{"Cos", "[", "v", "]"}]}], ")"}], " ", 
+      RowBox[{"Cos", "[", "u", "]"}]}], ",", 
+     RowBox[{"Sin", "[", "v", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"u", ",", "0", ",", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"v", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "10"}], ",", 
+   RowBox[{"MeshFunctions", "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{"#3", "&"}], ")"}]}]}], "]"}]], "Input",
+ CellLabel->"",ExpressionUUID->"898b1642-36ef-465c-aa6d-10f05dd21392"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Short Hand Notations: Prefix and Suffix", "Subsection",
+ CellChangeTimes->{{3.823287285872023*^9, 
+  3.823287297001408*^9}},ExpressionUUID->"0bf2236f-5a36-4138-abc1-\
+ccf97604c54d"],
+
+Cell[BoxData[
+ RowBox[{"words", " ", "=", 
+  RowBox[{"RandomWord", "[", "10", "]"}]}]], "Input",
+ CellChangeTimes->{{3.823289579713542*^9, 3.823289580943201*^9}},
+ CellLabel->
+  "In[235]:=",ExpressionUUID->"5eb7af0a-742c-46c3-87e6-0e280c3716c9"],
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{"Characters", ",", "words"}], "]"}]], "Input",
+ CellChangeTimes->{{3.823289510896389*^9, 3.823289587498102*^9}},
+ CellLabel->
+  "In[236]:=",ExpressionUUID->"c96d961d-ffcd-4027-9c42-803bf97a9f7b"],
+
+Cell[BoxData[
+ RowBox[{"Characters", "/@", "words"}]], "Input",
+ CellChangeTimes->{{3.823289595842721*^9, 
+  3.823289600622321*^9}},ExpressionUUID->"6febb54e-66ff-4c70-92c0-\
+f7819b281bfe"],
+
+Cell[BoxData[
+ RowBox[{"StringJoin", "@", "words"}]], "Input",
+ CellChangeTimes->{{3.82328960397178*^9, 
+  3.8232896109411507`*^9}},ExpressionUUID->"3f2ba190-ee34-4bcb-a298-\
+fbcb87e93c49"],
+
+Cell[BoxData[
+ RowBox[{"words", "//", "StringJoin"}]], "Input",
+ CellChangeTimes->{{3.823289640213949*^9, 3.823289643131919*^9}},
+ CellLabel->
+  "In[237]:=",ExpressionUUID->"1b045688-86ec-4e9f-8105-259b9c5f1122"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Thread, MapThread, AssociationThread", "Subsection",
+ CellChangeTimes->{{3.823287238535274*^9, 3.8232872509368753`*^9}, 
+   3.823287538965767*^9},ExpressionUUID->"3e8bf036-8234-4d54-8b6b-\
+5c744f9c7604"],
+
+Cell[BoxData[
+ RowBox[{"Thread", "[", 
+  RowBox[{"f", "[", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8232896610478477`*^9, 3.8232896616742067`*^9}, {
+  3.823289699502235*^9, 3.8232897112935543`*^9}},
+ CellLabel->
+  "In[239]:=",ExpressionUUID->"35f4a263-0920-42ad-9950-00b9ee475052"],
+
+Cell[BoxData[
+ RowBox[{"Partition", "[", 
+  RowBox[{
+   RowBox[{"Range", "[", "9", "]"}], ",", "3"}], "]"}]], "Input",
+ CellChangeTimes->{{3.823289914338147*^9, 3.823289934525112*^9}},
+ CellLabel->
+  "In[245]:=",ExpressionUUID->"e2b95928-98f4-41c7-84a8-27dac13f3ccb"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"butterfly", "[", "s_String", "]"}], ":=", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"s", ",", 
+    RowBox[{"StringReverse", "[", "s", "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.823289904288683*^9, 3.8232899422367487`*^9}, {
+  3.8232904591960793`*^9, 3.823290544876376*^9}},
+ CellLabel->
+  "In[258]:=",ExpressionUUID->"42b6639b-a5bf-4b70-bbeb-a057bec35eaa"],
+
+Cell[BoxData[
+ RowBox[{"butterfly", "[", "\"\<hello\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.823290546711748*^9, 3.823290558014515*^9}},
+ CellLabel->
+  "In[259]:=",ExpressionUUID->"9911c0a9-0480-40bd-ab3d-b2f11b1ea1aa"],
+
+Cell[BoxData[
+ RowBox[{"butterfly", "[", "words", "]"}]], "Input",
+ CellChangeTimes->{{3.8232905663453503`*^9, 3.823290579033291*^9}},
+ CellLabel->
+  "In[260]:=",ExpressionUUID->"8996ae91-aea0-4a81-b59a-a82cb3292f3f"],
+
+Cell[BoxData[
+ RowBox[{"Thread", "[", 
+  RowBox[{"butterfly", "[", "words", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.823289904288683*^9, 3.823290008888949*^9}, 
+   3.823290105946864*^9, {3.8232904339667587`*^9, 3.823290448770989*^9}, {
+   3.823290586264907*^9, 3.8232905922473097`*^9}},
+ CellLabel->
+  "In[261]:=",ExpressionUUID->"96d640cc-f03c-4096-8ee1-98886b69d980"],
+
+Cell[BoxData[
+ RowBox[{"Thread", "[", 
+  RowBox[{"Rule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.823289714344759*^9, 3.823289720188105*^9}, {
+  3.8232897527229156`*^9, 3.823289767934215*^9}},
+ CellLabel->
+  "In[240]:=",ExpressionUUID->"f7c812fb-e356-4be7-b7bd-8f090c816897"],
+
+Cell[BoxData[
+ RowBox[{"Thread", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}], "\[Rule]", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.823289780089347*^9, 3.8232897891430397`*^9}},
+ CellLabel->
+  "In[241]:=",ExpressionUUID->"bd9f3673-33a4-4584-9f7c-b3a5d9307f0e"],
+
+Cell[TextData[{
+ "Functions with attribute ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["Listable"]], "paclet:ref/Listable"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "f05cb4ff-19ad-46f2-8749-a0535ee9cae5"],
+ " are threaded automatically over lists"
+}], "Text",
+ CellChangeTimes->{
+  3.823290177010879*^9},ExpressionUUID->"ab25dfa1-b4e3-4088-a636-\
+1ef96ad760dc"],
+
+Cell[BoxData[
+ RowBox[{"Sqrt", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], "]"}]], "Input",Express\
+ionUUID->"55df8f68-245f-4d74-9bf1-79d95629f475"],
+
+Cell[BoxData[
+ RowBox[{"Sin", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], " ", 
+   RowBox[{"Pi", "/", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.823290189255658*^9, 3.823290200864114*^9}},
+ CellLabel->
+  "In[252]:=",ExpressionUUID->"2457b10c-51ef-46ba-bc49-bb6e40187a4e"],
+
+Cell[BoxData[
+ RowBox[{"MapThread", "[", 
+  RowBox[{"f", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.823289808021214*^9, 3.8232898261934443`*^9}},
+ CellLabel->
+  "In[243]:=",ExpressionUUID->"63c1b0c5-6d03-4ac7-b631-1c361b56edfd"],
+
+Cell[BoxData[
+ RowBox[{"Thread", "[", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.823290249001988*^9, 3.823290249764429*^9}},
+ CellLabel->
+  "In[254]:=",ExpressionUUID->"8139ef0d-bd83-4fa1-a6f9-16ee1fa49118"],
+
+Cell[BoxData[
+ RowBox[{"MapThread", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Labeled", "[", 
+     RowBox[{
+      RowBox[{"Framed", "[", "#1", "]"}], ",", "#2"}], "]"}], "&"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.823289808021214*^9, 3.8232898261934443`*^9}, {
+  3.823290266385808*^9, 3.823290305149088*^9}},
+ CellLabel->
+  "In[256]:=",ExpressionUUID->"8fb5754c-6bd1-4fbe-b00b-328109cf83cb"],
+
+Cell[BoxData[
+ RowBox[{"AssociationThread", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.823289838305846*^9, 3.82328984310032*^9}},
+ CellLabel->
+  "In[244]:=",ExpressionUUID->"09a526be-f05e-455c-ba52-f95202deaed1"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Evaluate and the Hold* Attributes", "Subsection",
+ CellChangeTimes->{{3.823287353423546*^9, 
+  3.823287360865199*^9}},ExpressionUUID->"e36f1d8a-b2dc-45cc-9d5e-\
+71afae23a459"],
+
+Cell[TextData[{
+ "Nonstandard evaluation is controlled by the attributes ",
+ StyleBox[ButtonBox["HoldAll",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/HoldAll"],
+  FontWeight->"Bold"],
+ ", ",
+ StyleBox[ButtonBox["HoldFirst",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/HoldFirst"],
+  FontWeight->"Bold"],
+ ", ",
+ StyleBox[ButtonBox["HoldRest",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/HoldRest"],
+  FontWeight->"Bold"],
+ ", and ",
+ StyleBox[ButtonBox["HoldAllComplete",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/HoldAllComplete"],
+  FontWeight->"Bold"],
+ ". You can use the ",
+ StyleBox[ButtonBox["Attributes",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Attributes"],
+  FontWeight->"Bold"],
+ " function to see the attributes of a symbol."
+}], "Text",
+ CellChangeTimes->{{3.821680350381879*^9, 3.821680381130436*^9}},
+ CellTags->
+  "Basic Principles",ExpressionUUID->"49c8b92d-f08e-4a50-a9ea-9b5f2031ed84"],
+
+Cell[TextData[{
+ "For example, ",
+ StyleBox[ButtonBox["NIntegrate",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/NIntegrate"],
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox[ButtonBox["Plot",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Plot"],
+  FontWeight->"Bold"],
+ " both have the ",
+ StyleBox[ButtonBox["HoldAll",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/HoldAll"],
+  FontWeight->"Bold"],
+ " attribute, so both functions will hold all their arguments unevaluated by \
+default:"
+}], "CodeText",
+ CellChangeTimes->{{3.8216803874644814`*^9, 3.821680399508249*^9}, {
+  3.822047902112082*^9, 3.822047902639895*^9}},
+ CellTags->
+  "Basic Principles",ExpressionUUID->"bc307052-aa11-4518-9976-31169855dafc"],
+
+Cell[BoxData[
+ RowBox[{"Attributes", "[", "NIntegrate", "]"}]], "Input",
+ CellTags->"Basic Principles",
+ CellLabel->"",ExpressionUUID->"35f7a940-b27a-4877-bbe0-a8cabd09bce6"],
+
+Cell[BoxData[
+ RowBox[{"Attributes", "[", "Plot", "]"}]], "Input",
+ CellTags->"Basic Principles",
+ CellLabel->"",ExpressionUUID->"a22954cd-2814-461d-92ef-dea2982b8182"],
+
+Cell[TextData[{
+ "Sometimes it is useful to force evaluation of function arguments that would \
+otherwise have been held unevaluated. This can be done using ",
+ StyleBox[ButtonBox["Evaluate",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Evaluate"],
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.8216804148722105`*^9, 3.8216804179579916`*^9}},
+ CellTags->
+  "Basic Principles",ExpressionUUID->"eae41bfc-f76a-4797-860d-1a36062f7412"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Normal", "[", 
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{"Sin", "[", "x", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{
+      RowBox[{"-", "2"}], " ", "Pi"}], ",", 
+     RowBox[{"2", " ", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.82328783706807*^9, 
+  3.823287837070242*^9}},ExpressionUUID->"f1c4f4e5-68a7-4156-95ec-\
+3bbb02a6db03"],
+
+Cell["We need to force the symbolic evaluation of ", "Text",
+ CellChangeTimes->{{3.82328786290014*^9, 
+  3.823287876241894*^9}},ExpressionUUID->"cebe6ac9-c168-4700-aa9b-\
+0a7a92bca8b4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Sin", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "someInteger"}], "}"}]}], "]"}], 
+  " "}]], "Input",
+ CellChangeTimes->{{3.82328786290014*^9, 
+  3.823287881892788*^9}},ExpressionUUID->"8c197caa-684c-4e01-8de9-\
+3fbecd940212"],
+
+Cell["\<\
+to obtain the power series expansion for Sin[x] before trying to substitute \
+numeric values for x.\
+\>", "Text",
+ CellChangeTimes->{{3.82328786290014*^9, 
+  3.823287866895673*^9}},ExpressionUUID->"dd1e0754-6e61-4fc4-a86c-\
+5475c5c2afb4"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"Normal", "[", 
+     RowBox[{"Series", "[", 
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{
+      RowBox[{"-", "2"}], " ", "Pi"}], ",", 
+     RowBox[{"2", " ", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8232878931090393`*^9, 
+  3.823287893111022*^9}},ExpressionUUID->"27a557f1-669b-4f94-bc4b-\
+5adb26648de0"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Options and Error Handling", "Subsection",
+ CellChangeTimes->{{3.823287385617715*^9, 
+  3.823287395653652*^9}},ExpressionUUID->"da4582f8-2d8e-417f-a073-\
+688d544133aa"],
+
+Cell[TextData[{
+ "For example, the default value for the ",
+ StyleBox[ButtonBox["Mesh",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Mesh"],
+  FontWeight->"Bold"],
+ " option in ",
+ StyleBox[ButtonBox["Plot",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Plot"],
+  FontWeight->"Bold"],
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "is ",
+ StyleBox[ButtonBox["None",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/None"],
+  FontWeight->"Bold"],
+ ". This is the value that will be used if you do not explicitly set this \
+optional argument:"
+}], "CodeText",
+ CellChangeTimes->{{3.821681616115571*^9, 3.821681630966406*^9}, {
+  3.822048193821796*^9, 3.822048194541238*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"57c1ec2c-eff1-40c3-b35b-dcf50cdbae8e"],
+
+Cell[BoxData[
+ RowBox[{"Options", "[", 
+  RowBox[{"Plot", ",", "Mesh"}], "]"}]], "Input",
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"8d22814e-88e5-4e21-8edb-5ac9dab6982b"],
+
+Cell[TextData[{
+ "Setting a value for ",
+ StyleBox[ButtonBox["Mesh",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Mesh"],
+  FontWeight->"Bold"],
+ " overrides the default behavior. In this case, a value of ",
+ StyleBox[ButtonBox["All",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/All"],
+  FontWeight->"Bold"],
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "displays all points used in the computation:"
+}], "CodeText",
+ CellChangeTimes->{{3.8216816377806854`*^9, 3.821681652331253*^9}, {
+  3.822048195779134*^9, 3.822048196238594*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"3dd2278f-950c-4c0b-9619-6cb7c4e7448b"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"x", "+", 
+     RowBox[{
+      SqrtBox["2"], 
+      RowBox[{"Sin", "[", "x", "]"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellTags->"Options and Messages",
+ CellLabel->"",ExpressionUUID->"d0ec6527-16c9-44d9-984e-a35d20e55b98"],
+
+Cell[TextData[{
+ "For example, the default value for the ",
+ StyleBox[ButtonBox["Mesh",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Mesh"],
+  FontWeight->"Bold"],
+ " option in ",
+ StyleBox[ButtonBox["Plot",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Plot"],
+  FontWeight->"Bold"],
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "is ",
+ StyleBox[ButtonBox["None",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/None"],
+  FontWeight->"Bold"],
+ ". This is the value that will be used if you do not explicitly set this \
+optional argument:"
+}], "CodeText",
+ CellChangeTimes->{{3.821681616115571*^9, 3.821681630966406*^9}, {
+  3.822048193821796*^9, 3.822048194541238*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"236b675b-661b-453b-a765-082c042bde8a"],
+
+Cell[BoxData[
+ RowBox[{"Options", "[", 
+  RowBox[{"Plot", ",", "Mesh"}], "]"}]], "Input",
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"a2598adb-973b-4298-befd-b7cd4db30a81"],
+
+Cell[TextData[{
+ "Setting a value for ",
+ StyleBox[ButtonBox["Mesh",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Mesh"],
+  FontWeight->"Bold"],
+ " overrides the default behavior. In this case, a value of ",
+ StyleBox[ButtonBox["All",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/All"],
+  FontWeight->"Bold"],
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "displays all points used in the computation:"
+}], "CodeText",
+ CellChangeTimes->{{3.8216816377806854`*^9, 3.821681652331253*^9}, {
+  3.822048195779134*^9, 3.822048196238594*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"38b0c3fb-66a2-49fc-ad94-7e1a04f3e880"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"x", "+", 
+     RowBox[{
+      SqrtBox["2"], 
+      RowBox[{"Sin", "[", "x", "]"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellTags->"Options and Messages",
+ CellLabel->"",ExpressionUUID->"7dbf3b1b-1c94-4cd7-8eb9-dc36598c197e"],
+
+Cell[CellGroupData[{
+
+Cell["Adding Options", "Subsubsection",
+ CellChangeTimes->{{3.820997237040392*^9, 3.8209972417368813`*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"c04737d8-a4e9-451c-a97f-5ba8a5beddac"],
+
+Cell["\<\
+You can set up any of your own functions to use optional arguments. This is \
+accomplished by first defining option names and giving default values for \
+these options. \
+\>", "Text",
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"92c588b9-cb37-42ca-9f34-a3814dffff5c"],
+
+Cell[TextData[{
+ "For example, this defines two options, ",
+ StyleBox["opt1", "Input"],
+ " and ",
+ StyleBox["opt2", "Input"],
+ " for a function ",
+ StyleBox["f", "Input"],
+ ", and gives default values:"
+}], "CodeText",
+ CellChangeTimes->{{3.8220481991758327`*^9, 3.8220481996818733`*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"841f78e2-92e2-4932-948d-974ffe86f163"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Options", "[", "f", "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"opt1", "\[Rule]", "a"}], ",", 
+    RowBox[{"opt2", "\[Rule]", "b"}]}], "}"}]}]], "Input",
+ CellTags->"Options and Messages",
+ CellLabel->"In[4]:=",ExpressionUUID->"f5a7ef4e-76e6-4453-900b-91545713b908"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox[ButtonBox["OptionsPattern",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/OptionsPattern"],
+  FontWeight->"Bold"],
+ ", set up ",
+ StyleBox["f", "MR"],
+ " to take optional arguments. The value of an option is extracted with ",
+ StyleBox[ButtonBox["OptionValue",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/OptionValue"],
+  FontWeight->"Bold"],
+ StyleBox[":",
+  FontWeight->"Bold"]
+}], "CodeText",
+ CellChangeTimes->{{3.821681701354171*^9, 3.8216817149826965`*^9}, {
+  3.8220482026528673`*^9, 3.822048203519251*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"c1956f4f-f6ab-4b8b-a585-669dd28a5a66"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", 
+    RowBox[{"OptionsPattern", "[", "]"}]}], "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["x", "2"], "+", 
+   FractionBox[
+    RowBox[{"OptionValue", "[", "opt1", "]"}], 
+    RowBox[{"OptionValue", "[", "opt2", "]"}]]}]}]], "Input",
+ CellTags->"Options and Messages",
+ CellLabel->"In[5]:=",ExpressionUUID->"20586804-de67-4c6e-a403-43b8ed9a4743"],
+
+Cell[TextData[{
+ "First, try out ",
+ StyleBox["f", "Input"],
+ " with one argument. In this case, the default value of the options are used:"
+}], "CodeText",
+ CellChangeTimes->{{3.822048204789463*^9, 3.822048205171803*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"f95055af-ec11-4d3e-946e-8af6fa14a57f"],
+
+Cell[BoxData[
+ RowBox[{"f", "[", "z", "]"}]], "Input",
+ CellTags->"Options and Messages",
+ CellLabel->"In[6]:=",ExpressionUUID->"29a83c42-0e4f-4024-8094-6a5b3796326e"],
+
+Cell["\<\
+Explicitly setting the options causes their values to be passed and used in \
+the body of the function:\
+\>", "CodeText",
+ CellChangeTimes->{{3.822048206348625*^9, 3.822048206769054*^9}},
+ CellTags->
+  "Options and \
+Messages",ExpressionUUID->"14e385ac-53e2-4ef5-9707-3825182c0cf0"],
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"z", ",", 
+   RowBox[{"opt1", "\[Rule]", "\[Alpha]"}], ",", 
+   RowBox[{"opt2", "\[Rule]", "\[Beta]"}]}], "]"}]], "Input",
+ CellTags->"Options and Messages",
+ CellLabel->"In[7]:=",ExpressionUUID->"f944f335-ce7d-4cd1-96b7-a841979ef090"],
+
+Cell["", "EndOfSlide",ExpressionUUID->"87994020-5aab-46ed-b809-c8ce62afde5b"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Lists, Associations, Datasets", "Subsection",
+ CellChangeTimes->{{3.823287132556777*^9, 
+  3.823287138346528*^9}},ExpressionUUID->"f7230cbd-8135-45dd-be33-\
+b8807d3bcc23"],
+
+Cell[CellGroupData[{
+
+Cell["Lists", "Subsubsection",
+ CellChangeTimes->{{3.823103331301922*^9, 
+  3.823103331941936*^9}},ExpressionUUID->"4b911f0d-509f-48c5-8191-\
+53f537c568a2"],
+
+Cell["\<\
+Lists are the most basic data structures in the Wolfram Language for easy \
+manipulation of data.\
+\>", "Text",
+ CellChangeTimes->{{3.709990423803499*^9, 3.7099904373446712`*^9}, {
+   3.716512743167952*^9, 3.716512767715868*^9}, {3.725371482118367*^9, 
+   3.725371485363735*^9}, 
+   3.823270168995956*^9},ExpressionUUID->"4c3147c1-3a7e-41b9-973e-\
+0e0966e7bb62"],
+
+Cell[CellGroupData[{
+
+Cell["Import the \[OpenCurlyDoubleQuote]RetailSales.tsv\
+\[CloseCurlyDoubleQuote] data file:", "CodeText",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.7257335499267263`*^9, 
+  3.725733576084993*^9}},ExpressionUUID->"bc4d32d7-db47-49a9-8a92-\
+c509512190a3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rawData", " ", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<ExampleData/RetailSales.tsv\>\"", ",", "\"\<TSV\>\""}], 
+    "]"}]}], ";"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.713183212944642*^9, 3.7131832530609827`*^9}, {
+   3.714822487123502*^9, 3.714822516416505*^9}, {3.714823039507061*^9, 
+   3.714823047073111*^9}, 3.716555395646541*^9, 
+   3.717181556650783*^9},ExpressionUUID->"926522bf-3c4c-4966-8111-\
+870433f1fb26"]
+}, Open  ]],
+
+Cell["\<\
+Take a peek at the data\[LongDash]the first few rows at the beginning of the \
+list:\
+\>", "CodeText",
+ CellChangeTimes->{{3.716512844814125*^9, 3.71651286786051*^9}, {
+   3.7165481791070843`*^9, 3.716548193935816*^9}, {3.716555423526814*^9, 
+   3.716555467633696*^9}, {3.7171815686719933`*^9, 3.717181570104134*^9}, 
+   3.725379853441732*^9, 3.726102276069272*^9, {3.823270175242804*^9, 
+   3.8232701821237392`*^9}},ExpressionUUID->"7fcecbe2-d951-486a-a867-\
+a4d3d2401779"],
+
+Cell[BoxData[
+ RowBox[{"rawData", " ", "//", "Shallow"}]], "Input",
+ CellChangeTimes->{{3.714825976821967*^9, 3.7148259817626038`*^9}, {
+   3.716555423527184*^9, 3.716555467634075*^9}, 3.725379853443619*^9, 
+   3.726102276069675*^9},ExpressionUUID->"2687a21f-6de5-4432-ad15-\
+6800e6c5fe80"],
+
+Cell["Check how many rows and columns:", "CodeText",
+ CellChangeTimes->{{3.716512873821849*^9, 3.716512879383009*^9}, {
+   3.7165481978983717`*^9, 3.716548201695369*^9}, {3.7165554235273333`*^9, 
+   3.716555467634272*^9}, 3.72537985344528*^9, 3.726102276069829*^9, 
+   3.8232701846517572`*^9},ExpressionUUID->"0822da19-4806-48ec-a3b3-\
+e352cb159312"],
+
+Cell[BoxData[
+ RowBox[{"rawData", " ", "//", "Dimensions"}]], "Input",
+ CellChangeTimes->{{3.714825987654039*^9, 3.714825992049851*^9}, {
+   3.716555423527813*^9, 3.7165554676345463`*^9}, 3.7253798534476147`*^9, 
+   3.726102276070305*^9},ExpressionUUID->"67f9e656-bc6e-4d42-bf6f-\
+8f0ad265eb73"],
+
+Cell["\<\
+If there is a header row, extract it for labeling purposes later:\
+\>", "CodeText",
+ CellChangeTimes->{{3.7165128869249973`*^9, 3.71651289866707*^9}, {
+   3.716548212635559*^9, 3.716548241325313*^9}, 3.71654901177536*^9, {
+   3.716555423528305*^9, 3.7165554676350393`*^9}, 3.725379853448873*^9, 
+   3.7257602569790707`*^9, 
+   3.726102276070513*^9},ExpressionUUID->"50047a23-06aa-4dbb-8775-\
+3043ec6a1dac"],
+
+Cell[BoxData[
+ RowBox[{"columnHeaders", " ", "=", " ", 
+  RowBox[{"First", "@", "rawData"}]}]], "Input",
+ CellChangeTimes->{{3.7148230125094957`*^9, 3.7148230513289022`*^9}, {
+   3.716555423528575*^9, 3.716555467635282*^9}, 3.725379853450732*^9, 
+   3.726102276071024*^9},ExpressionUUID->"4dd786a7-0100-40de-9689-\
+50062b548a71"],
+
+Cell["Extract the data without the header rows:", "CodeText",
+ CellChangeTimes->{{3.716512905485745*^9, 3.716512910873382*^9}, {
+   3.7165482441979637`*^9, 3.716548248093446*^9}, {3.716555423529063*^9, 
+   3.716555467635777*^9}, 3.7253798534518633`*^9, 3.7257602627867327`*^9, 
+   3.726102276071226*^9},ExpressionUUID->"aead8d89-3473-48d6-90c8-\
+572284b1c67a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"salesData", " ", "=", " ", 
+   RowBox[{"Rest", "@", "rawData"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.714823034924561*^9, 3.714823061034189*^9}, {
+   3.7165554235293503`*^9, 3.716555467636046*^9}, 3.717152277768529*^9, 
+   3.725379853453212*^9, 
+   3.72610227607174*^9},ExpressionUUID->"ce900756-d0cc-463d-adda-\
+4fe29149cb59"],
+
+Cell["Extract specific columns of data:", "CodeText",
+ CellChangeTimes->{{3.716513041664543*^9, 3.7165130550450363`*^9}, {
+   3.716513088609428*^9, 3.7165131052564907`*^9}, {3.716549064439039*^9, 
+   3.716549090474872*^9}, {3.716555423529491*^9, 3.7165554676362343`*^9}, 
+   3.7253798534542513`*^9, 3.726102276071887*^9, 
+   3.823270189459878*^9},ExpressionUUID->"8764d228-a5b8-40b7-af41-\
+1abadf16216c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"salesByDate", " ", "=", 
+   RowBox[{"salesData", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "3"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"salesByCity", " ", "=", 
+   RowBox[{"salesData", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3"}], "}"}]}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.714826713818122*^9, 3.714826721468878*^9}, {
+   3.714826897735046*^9, 3.71482689898053*^9}, {3.7165130205417833`*^9, 
+   3.716513028708406*^9}, {3.7165490340868177`*^9, 3.7165490665748377`*^9}, {
+   3.716549122335388*^9, 3.716549122702402*^9}, {3.716555423529726*^9, 
+   3.7165554676365*^9}, {3.7171522858886747`*^9, 3.717152289244014*^9}, {
+   3.7253717088383512`*^9, 3.725371734867166*^9}, 3.7253798534556026`*^9, {
+   3.725760145503026*^9, 3.725760170956505*^9}, {3.7257602691799927`*^9, 
+   3.7257603377092323`*^9}, 
+   3.726102276072159*^9},ExpressionUUID->"d5375d14-502d-46b6-a568-\
+8680bb41e302"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Association", "Subsubsection",
+ CellChangeTimes->{{3.823103384211557*^9, 
+  3.823103385932086*^9}},ExpressionUUID->"159c4d26-12b6-40f1-b817-\
+dd3ff6d2a6b0"],
+
+Cell[TextData[{
+ "An ",
+ StyleBox[ButtonBox["Association",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Association"],
+  FontWeight->"Bold"],
+ " represents data as key-value pairs. "
+}], "Text",
+ CellChangeTimes->{{3.619437710765749*^9, 3.619437776952045*^9}, {
+   3.619437809844825*^9, 3.6194378457377243`*^9}, 3.619440244896798*^9, {
+   3.619440280492786*^9, 3.6194403498246326`*^9}, {3.6197822193542747`*^9, 
+   3.619782239744755*^9}, {3.621258771798959*^9, 3.621258771864337*^9}, 
+   3.680608745957323*^9, 
+   3.7165498749927998`*^9},ExpressionUUID->"2647eb97-e69a-4ef5-9a9b-\
+e5aebf6bb5f7"],
+
+Cell["\<\
+Associations provide the dictionary data structure, where each value is \
+labeled with and accessed by its key. This removes the need to remember \
+separately the meaning of each entry in a list and strictly adhere to the \
+sequence.\
+\>", "Text",
+ CellChangeTimes->{{3.717152377717637*^9, 3.717152504903263*^9}, {
+  3.717181742303638*^9, 3.717181751860368*^9}, {3.8232702097167673`*^9, 
+  3.823270209955728*^9}},ExpressionUUID->"cf4baf51-9060-4d09-9890-\
+d65e7e65d807"],
+
+Cell["Here is a simple association:", "CodeText",
+ CellChangeTimes->{{3.823103530657187*^9, 
+  3.823103535876*^9}},ExpressionUUID->"a43c5f2c-3161-48a2-8842-0b76030199e9"],
+
+Cell[BoxData[
+ RowBox[{"assoc", "=", 
+  RowBox[{"<|", 
+   RowBox[{
+    RowBox[{"a", "\[Rule]", "4"}], ",", 
+    RowBox[{"b", "\[Rule]", "2"}], ",", 
+    RowBox[{"c", "\[Rule]", "1"}], ",", 
+    RowBox[{"d", "\[Rule]", "5"}]}], "|>"}]}]], "Input",
+ CellChangeTimes->{{3.619437928034724*^9, 3.6194379363783903`*^9}, {
+  3.619437986627963*^9, 
+  3.619437989194017*^9}},ExpressionUUID->"dbe53e5b-6ce5-4662-a89c-\
+db4e21dfab46"],
+
+Cell["You can look up a value by key:", "CodeText",
+ CellChangeTimes->{{3.619438072396846*^9, 3.619438079796438*^9}, 
+   3.680608748294738*^9, {3.725800789503187*^9, 3.725800789867407*^9}, {
+   3.823103540735984*^9, 
+   3.823103542828211*^9}},ExpressionUUID->"f0eab2bd-122d-4eae-9423-\
+afd89280990a"],
+
+Cell[BoxData[
+ RowBox[{"assoc", "[", "b", "]"}]], "Input",
+ CellChangeTimes->{{3.619437940017036*^9, 3.619437942962775*^9}, 
+   3.6857245300199413`*^9},ExpressionUUID->"aa530ee0-9d39-4730-8063-\
+05607da788df"],
+
+Cell[BoxData[
+ RowBox[{"assoc", "[", 
+  RowBox[{"[", "2", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.619438245032156*^9, 
+  3.6194382582935553`*^9}},ExpressionUUID->"feb760f7-cfce-44ad-884c-\
+1223bf4f52a4"],
+
+Cell[BoxData[
+ RowBox[{"assoc", "[", 
+  RowBox[{"[", 
+   RowBox[{"Key", "[", "b", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.685751015106077*^9, 
+  3.6857510225785418`*^9}},ExpressionUUID->"0c1109af-6d95-4ff4-bc53-\
+057bf7c714eb"],
+
+Cell["\<\
+Many common list operations work transparently on associations:\
+\>", "CodeText",
+ CellChangeTimes->{{3.619438083923483*^9, 3.6194381258881083`*^9}, 
+   3.6806087515461516`*^9, {3.725800795910369*^9, 
+   3.725800796851512*^9}},ExpressionUUID->"66c8fa00-26e3-42de-84b7-\
+761c653f8e4f"],
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{"f", ",", "assoc"}], "]"}]], "Input",
+ CellChangeTimes->{{3.685751669786703*^9, 
+  3.685751675691868*^9}},ExpressionUUID->"c4cb779f-0a66-4edd-8203-\
+dcbf4a557cfa"],
+
+Cell[BoxData[
+ RowBox[{"Sort", "@", "assoc"}]], "Input",
+ CellChangeTimes->{{3.619437999196361*^9, 
+  3.619438003934044*^9}},ExpressionUUID->"f14cf5ad-c377-4a2e-adca-\
+048b50ff0dd2"],
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{"assoc", ",", 
+   RowBox[{
+    RowBox[{"#", ">", "3"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.619438008807323*^9, 
+  3.6194380216107492`*^9}},ExpressionUUID->"baa24a87-6532-4692-bfd5-\
+09e850118e91"],
+
+Cell[BoxData[
+ RowBox[{"Total", "[", "assoc", "]"}]], "Input",
+ CellChangeTimes->{{3.6194381418325453`*^9, 
+  3.619438145583832*^9}},ExpressionUUID->"220cd487-7dc6-409f-91d8-\
+44a7b3c72e20"],
+
+Cell["Some functions apply to keys:", "CodeText",
+ CellChangeTimes->{{3.685752025490437*^9, 3.685752041093617*^9}, {
+  3.6857521044915667`*^9, 3.685752105371441*^9}, {3.725800801166581*^9, 
+  3.725800803915608*^9}},ExpressionUUID->"82b0f1c0-b7ac-4b01-ae06-\
+b482223a8c4a"],
+
+Cell[BoxData[
+ RowBox[{"KeyMap", "[", 
+  RowBox[{"f", ",", "assoc"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6857520442081623`*^9, 
+  3.685752054614959*^9}},ExpressionUUID->"5b440670-c07e-4c95-8cfd-\
+70c16a7936e5"],
+
+Cell[BoxData[
+ RowBox[{"KeySort", "[", "assoc", "]"}]], "Input",
+ CellChangeTimes->{{3.685752066272255*^9, 
+  3.685752074627562*^9}},ExpressionUUID->"f1d056f6-f421-43bd-aaba-\
+6d6192c42e0f"],
+
+Cell["Extract keys or values from an association:", "CodeText",
+ CellChangeTimes->{{3.619438180044606*^9, 3.619438194929821*^9}, 
+   3.6806087552363577`*^9, {3.7258008062757597`*^9, 
+   3.725800807059561*^9}},ExpressionUUID->"e56eaaea-c008-4db7-9c61-\
+900cb6ac7047"],
+
+Cell[BoxData[
+ RowBox[{"Keys", "[", "assoc", "]"}]], "Input",
+ CellChangeTimes->{{3.619438198219534*^9, 
+  3.6194382015550127`*^9}},ExpressionUUID->"7c5a4149-a91b-4708-9b3c-\
+e634ba00352d"],
+
+Cell[BoxData[
+ RowBox[{"Values", "[", "assoc", "]"}]], "Input",
+ CellChangeTimes->{{3.6194382035811663`*^9, 
+  3.619438208473506*^9}},ExpressionUUID->"e678aa9b-c102-49e0-a86c-\
+35de6d075f84"],
+
+Cell[TextData[{
+ "Functions such as ",
+ StyleBox[ButtonBox["AssociationMap",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/AssociationMap"],
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox[ButtonBox["AssociationThread",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/AssociationThread"],
+  FontWeight->"Bold"],
+ " can construct associations from lists:"
+}], "CodeText",
+ CellChangeTimes->{{3.619437710765749*^9, 3.619437776952045*^9}, {
+   3.619437809844825*^9, 3.6194378457377243`*^9}, {3.619438450306679*^9, 
+   3.61943848100808*^9}, {3.6194385282356787`*^9, 3.619438529043589*^9}, {
+   3.621258787649001*^9, 3.62125879784138*^9}, 3.6806087593866653`*^9, {
+   3.725800815196176*^9, 
+   3.7258008166275663`*^9}},ExpressionUUID->"69b29ee5-1038-4495-8d6a-\
+2c6a34340d50"],
+
+Cell[BoxData[
+ RowBox[{"AssociationMap", "[", 
+  RowBox[{"f", ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}]}], "]"}]], "Input",Expr\
+essionUUID->"0de8be9c-f2f8-4ab6-ab6f-802154ac28af"],
+
+Cell[BoxData[
+ RowBox[{"AssociationThread", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6194390105243263`*^9, 
+  3.619439027439542*^9}},ExpressionUUID->"a78cf961-e0a1-4890-a8f8-\
+ea074493283c"],
+
+Cell[TextData[{
+ "Associations are also returned by using functions like ",
+ StyleBox[ButtonBox["GroupBy",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/GroupBy"],
+  FontWeight->"Bold"],
+ ", ",
+ StyleBox[ButtonBox["Counts",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Counts"],
+  FontWeight->"Bold"],
+ ", ",
+ StyleBox[ButtonBox["CountsBy",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/CountsBy"],
+  FontWeight->"Bold"],
+ ", etc. to process data:"
+}], "Text",
+ CellChangeTimes->{{3.7165499842459803`*^9, 3.7165500468329973`*^9}, {
+   3.717152582479829*^9, 3.717152587156151*^9}, {3.717152876209139*^9, 
+   3.717152876975586*^9}, {3.7258008272201567`*^9, 3.72580084050917*^9}, 
+   3.823270231748601*^9, {3.8232724456163893`*^9, 
+   3.823272459399219*^9}},ExpressionUUID->"540a2233-8f83-4774-9a0b-\
+76ac4f4b00ae"],
+
+Cell[BoxData[
+ RowBox[{"salesData", " ", "=", 
+  RowBox[{"Rest", "[", 
+   RowBox[{"Import", "[", "\"\<ExampleData/RetailSales.tsv\>\"", "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.823103686405805*^9, 3.823103737693493*^9}, {
+  3.823103918250494*^9, 3.8231039381313543`*^9}},
+ CellLabel->
+  "In[128]:=",ExpressionUUID->"1205571f-a388-4286-91f9-8f698d1f4f2b"],
+
+Cell["Total sales for each city:", "CodeText",
+ CellChangeTimes->{{3.8231040889609537`*^9, 
+  3.8231040908939447`*^9}},ExpressionUUID->"ec24877c-d846-4b12-b7d8-\
+9d806473a0a5"],
+
+Cell[BoxData[
+ RowBox[{"GroupBy", "[", 
+  RowBox[{
+   RowBox[{"salesData", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"2", ";;", "3"}]}], "]"}], "]"}], ",", 
+   RowBox[{"First", "\[Rule]", " ", "Last"}], ",", " ", "Total"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.823103958058346*^9, 3.8231039711137*^9}, {
+  3.823104013236672*^9, 3.823104069305257*^9}},
+ CellLabel->
+  "In[131]:=",ExpressionUUID->"bbb73a8c-04ee-47d9-bafc-6e54fb165ae9"],
+
+Cell["Number of sales for each city:", "CodeText",
+ CellChangeTimes->{
+  3.823104102888938*^9},ExpressionUUID->"fee3d0b5-e8dc-43f3-b8fd-\
+519fded00211"],
+
+Cell[BoxData[
+ RowBox[{"Counts", "[", 
+  RowBox[{"salesData", "[", 
+   RowBox[{"[", 
+    RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.823104105718152*^9, 3.823104114868346*^9}},
+ CellLabel->
+  "In[132]:=",ExpressionUUID->"8d866fe3-cb5b-4aa5-b805-ba4228096f14"],
+
+Cell[BoxData[
+ RowBox[{"CountsBy", "[", 
+  RowBox[{"salesData", ",", 
+   RowBox[{
+    RowBox[{"#", "[", 
+     RowBox[{"[", "2", "]"}], "]"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.82310412943299*^9, 3.8231041604013367`*^9}},
+ CellLabel->
+  "In[134]:=",ExpressionUUID->"f8c06fb7-2d36-4629-a393-eeb1a39c7952"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dataset", "Subsubsection",
+ CellChangeTimes->{{3.823104559038314*^9, 
+  3.823104560016307*^9}},ExpressionUUID->"eba71bca-78a4-4361-b798-\
+41f05a6fd739"],
+
+Cell[TextData[{
+ "A ",
+ StyleBox[ButtonBox["Dataset",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Dataset"],
+  FontWeight->"Bold"],
+ " is a general way of representing a hierarchy of lists and associations, \
+constructed from tabular data."
+}], "Text",
+ CellChangeTimes->{
+  3.716550888382307*^9, {3.716550965459799*^9, 
+   3.7165509726171427`*^9}},ExpressionUUID->"f03d20c1-da9e-4167-92b4-\
+9252efb20ea9"],
+
+Cell["\<\
+It provides a flexible framework for sophisticated data queries and \
+manipulations on data given a defined regular structure at arbitrary \
+complexity:\
+\>", "Text",
+ CellChangeTimes->{
+  3.717152926749411*^9, {3.717152960134717*^9, 3.717152970951189*^9}, {
+   3.823270249564055*^9, 
+   3.823270250724133*^9}},ExpressionUUID->"ee6d0e00-0dfc-4528-ba5e-\
+5efe25c0cfa6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"d", "=", 
+   RowBox[{"Dataset", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<a\>\"", "\[Rule]", "1"}], ",", 
+        RowBox[{"\"\<b\>\"", "\[Rule]", "\"\<x\>\""}], ",", 
+        RowBox[{"\"\<c\>\"", "\[Rule]", 
+         RowBox[{"{", "1", "}"}]}]}], "|>"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<a\>\"", "\[Rule]", "2"}], ",", 
+        RowBox[{"\"\<b\>\"", "\[Rule]", "\"\<y\>\""}], ",", 
+        RowBox[{"\"\<c\>\"", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", "3"}], "}"}]}]}], "|>"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<a\>\"", "\[Rule]", "3"}], ",", 
+        RowBox[{"\"\<b\>\"", "\[Rule]", "\"\<z\>\""}], ",", 
+        RowBox[{"\"\<c\>\"", "\[Rule]", 
+         RowBox[{"{", "3", "}"}]}]}], "|>"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<a\>\"", "\[Rule]", "4"}], ",", 
+        RowBox[{"\"\<b\>\"", "\[Rule]", "\"\<x\>\""}], ",", 
+        RowBox[{"\"\<c\>\"", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "5"}], "}"}]}]}], "|>"}]}], "\[IndentingNewLine]",
+      "}"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.619440503962021*^9, 3.619440518471898*^9}, 
+   3.620648363926331*^9},ExpressionUUID->"ccce9e52-23a1-4407-90e6-\
+ad8fb71eabcf"],
+
+Cell["\<\
+Create a Dataset from the Association created in the preceding example:\
+\>", "CodeText",
+ CellChangeTimes->{{3.823183614284986*^9, 3.8231836464945927`*^9}, {
+  3.823270256820284*^9, 
+  3.823270261267926*^9}},ExpressionUUID->"bf931d81-b5f7-48bb-9894-\
+a6f76b08f804"],
+
+Cell[BoxData[
+ RowBox[{"Dataset", "[", "salesData", "]"}]], "Input",
+ CellChangeTimes->{{3.82310461477837*^9, 3.823104626158396*^9}},
+ CellLabel->
+  "In[135]:=",ExpressionUUID->"161985f7-1d7c-492b-a1ac-7b14b64f188d"],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["SemanticImport",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/SemanticImport"],
+  FontWeight->"Bold"],
+ " attempts to import data from a file directly into a Dataset:"
+}], "CodeText",
+ CellChangeTimes->{{3.823183667512156*^9, 
+  3.82318369128305*^9}},ExpressionUUID->"704e4029-7fa8-4b6e-8988-\
+c97a09b242cb"],
+
+Cell[BoxData[
+ RowBox[{"semanticSalesData", " ", "=", 
+  RowBox[{
+  "SemanticImport", "[", "\"\<ExampleData/RetailSales.tsv\>\"", 
+   "]"}]}]], "Input",
+ CellLabel->"In[24]:=",ExpressionUUID->"4915fee5-2f83-44a3-b056-fc7db40bb78f"],
+
+Cell["The first row in the Dataset:", "CodeText",
+ CellChangeTimes->{{3.82318377397232*^9, 3.823183778561575*^9}, 
+   3.823183989577073*^9},ExpressionUUID->"6e4c52f6-c0a0-48c6-b128-\
+bb0f88c22455"],
+
+Cell[BoxData[
+ RowBox[{"semanticSalesData", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.8231047013702297`*^9, 3.8231047075961237`*^9}},
+ CellLabel->
+  "In[138]:=",ExpressionUUID->"d4d25e8e-b8d3-4f49-9d9a-dcb01c55edf5"],
+
+Cell[TextData[{
+ "The element from the ",
+ Cell[BoxData[
+ "\"\<City\>\""], "Input",ExpressionUUID->
+  "8767d9fd-34ab-4e66-88b7-258a14bef1a7"],
+ " column in the first row:"
+}], "CodeText",
+ CellChangeTimes->{{3.823183999770095*^9, 3.823184011472443*^9}, 
+   3.823270279438747*^9},ExpressionUUID->"e21a942c-c807-4c5b-9e65-\
+a290424050e3"],
+
+Cell[BoxData[
+ RowBox[{"semanticSalesData", "[", 
+  RowBox[{"1", ",", "\"\<City\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.823104669554627*^9, 3.823104677761351*^9}, 
+   3.823104718422323*^9},
+ CellLabel->
+  "In[139]:=",ExpressionUUID->"f55834df-0947-4800-8352-a84388324dbf"],
+
+Cell[TextData[{
+ "Elements from all rows in the ",
+ Cell[BoxData[
+ "\"\<City\>\""], "Input",ExpressionUUID->
+  "a47156cc-02db-4741-ba19-e1863e9f8f1a"],
+ " column:"
+}], "CodeText",
+ CellChangeTimes->{{3.823184023432087*^9, 3.823184035041668*^9}, 
+   3.823270284411318*^9},ExpressionUUID->"d52994f8-665f-4c77-8cce-\
+8bf52a82b492"],
+
+Cell[BoxData[
+ RowBox[{"semanticSalesData", "[", 
+  RowBox[{"All", ",", "\"\<City\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.823104669554627*^9, 3.823104677761351*^9}, {
+  3.823104718422323*^9, 3.823104735419466*^9}},
+ CellLabel->
+  "In[140]:=",ExpressionUUID->"1b296acf-bc46-4b29-9641-5f2f871b6362"],
+
+Cell["Number of sales for each city:", "CodeText",
+ CellChangeTimes->{{3.8231840598269463`*^9, 
+  3.823184065248376*^9}},ExpressionUUID->"2390ee3a-dd05-47be-83a7-\
+ba3c0c5c2dab"],
+
+Cell[BoxData[
+ RowBox[{"semanticSalesData", "[", 
+  RowBox[{"Counts", ",", "\"\<City\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.823104669554627*^9, 3.823104677761351*^9}, {
+  3.823104718422323*^9, 3.823104756231544*^9}},
+ CellLabel->
+  "In[141]:=",ExpressionUUID->"45e66566-a76f-41d7-9bc8-9f88a47bbdf5"],
+
+Cell["Sales that occurred before January 31, 2014:", "CodeText",
+ CellChangeTimes->{{3.823184089717955*^9, 3.8231841207504*^9}, {
+  3.8232725039026012`*^9, 
+  3.823272504291853*^9}},ExpressionUUID->"a12c5036-5e52-4e57-969e-\
+beb41ed6aae6"],
+
+Cell[BoxData[
+ RowBox[{"semanticSalesData", "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"#Date", "<", 
+      RowBox[{"DateObject", "[", "\"\<Jan 31 2014\>\"", "]"}]}], "&"}], "]"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<City\>\"", ",", "\"\<Sales\>\""}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.823104669554627*^9, 3.823104677761351*^9}, {
+  3.823104718422323*^9, 3.82310486008211*^9}, {3.8231049290003*^9, 
+  3.823104954010215*^9}, {3.823104988484003*^9, 3.823104990912011*^9}},
+ CellLabel->
+  "In[156]:=",ExpressionUUID->"280b6096-747b-479e-9e48-2fd5b16cf984"],
+
+Cell["\<\
+Select sales for dates prior to January 31, 2014, then group sales by city \
+and aggregate total sales in each group:\
+\>", "CodeText",
+ CellChangeTimes->{{3.823184135167948*^9, 3.8231841579166727`*^9}, {
+  3.8231846412980957`*^9, 
+  3.823184665795394*^9}},ExpressionUUID->"6d84ce85-892c-4168-a1e7-\
+3403abe3753e"],
+
+Cell[BoxData[
+ RowBox[{"semanticSalesData", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"#Date", "<", 
+       RowBox[{"DateObject", "[", "\"\<Jan 31 2014\>\"", "]"}]}], "&"}], 
+     "]"}], "/*", 
+    RowBox[{"GroupBy", "[", 
+     RowBox[{"#City", "&"}], "]"}]}], ",", "Total", ",", "\"\<Sales\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.823184269348501*^9, 3.823184377686495*^9}, {
+  3.8231845202067003`*^9, 3.8231845253264637`*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"31a53f8b-5c30-477f-bf5f-5e2734ff3887"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Web-scraping example", "Subsection",
+ CellChangeTimes->{{3.823287149731484*^9, 
+  3.823287160454262*^9}},ExpressionUUID->"e2bdbf19-8ec3-4a2d-8074-\
+31f673c5aa4d"],
+
+Cell[TextData[{
+ "Documentation ",
+ ButtonBox["workflow",
+  BaseStyle->"Link",
+  ButtonData->"paclet:workflow/ScrapeDataFromAWebsite"]
+}], "Text",
+ CellChangeTimes->{{3.8232884151661177`*^9, 
+  3.823288439766922*^9}},ExpressionUUID->"11dbb51d-991b-4089-b9fb-\
+d9b20b18fb40"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["How to look up a function for a specific task?", "Subsection",
+ CellChangeTimes->{{3.823287416262402*^9, 
+  3.823287441945668*^9}},ExpressionUUID->"40cee37a-7364-4018-b8a4-\
+38557adbde28"],
+
+Cell["Navigating the documentation center", "Text",
+ CellChangeTimes->{{3.823288448580708*^9, 
+  3.823288455855006*^9}},ExpressionUUID->"c62e601e-b7b0-4715-992f-\
+8474667f7f44"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Where to find Help?", "Subsection",
+ CellChangeTimes->{{3.823287337692342*^9, 
+  3.823287343111966*^9}},ExpressionUUID->"c57f6608-aa5e-4b0b-b2a4-\
+4ff6888d8098"],
+
+Cell["Documentation center: Details, Examples, Tutorials ", "Item",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288513684402*^9}, {
+  3.823288695156086*^9, 
+  3.823288695156652*^9}},ExpressionUUID->"fd6367c5-4180-4c15-8203-\
+279ae5424a6e"],
+
+Cell[CellGroupData[{
+
+Cell["Web content:", "Item",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288513684402*^9}, {
+  3.823288721926499*^9, 3.8232887263404093`*^9}, {3.8232887606871767`*^9, 
+  3.823288763000222*^9}},ExpressionUUID->"c9bbc58a-1d89-43d5-bb28-\
+80d110333a16"],
+
+Cell["Wolfram U: https://www.wolfram.com/wolfram-u", "Subitem",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288513684402*^9}, {
+  3.823288721926499*^9, 3.8232887263404093`*^9}, {3.8232887606871767`*^9, 
+  3.823288762680935*^9}},ExpressionUUID->"edee712b-ae5b-4315-b247-\
+d4cb0983663f"],
+
+Cell["YouTube: https://www.youtube.com/user/WolframResearch", "Subitem",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288513684402*^9}, {
+  3.823288721926499*^9, 3.823288725199898*^9}, {3.823288768200667*^9, 
+  3.823288772160534*^9}, {3.8232888215457*^9, 
+  3.8232888223560762`*^9}},ExpressionUUID->"7d8df0aa-17d0-48f1-aef0-\
+eb3e7f4d1ebc"],
+
+Cell["Twitch: https://www.twitch.tv/stephen_wolfram", "Subitem",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288513684402*^9}, {
+  3.823288721926499*^9, 3.823288725199898*^9}, {3.823288768200667*^9, 
+  3.823288772160534*^9}, {3.8232888215457*^9, 
+  3.823288840337592*^9}},ExpressionUUID->"94793b37-0f20-46e0-9c95-\
+ad77590a4761"],
+
+Cell[CellGroupData[{
+
+Cell["Blogs: ", "Subitem",
+ CellChangeTimes->{{3.823288863241621*^9, 
+  3.8232888734463863`*^9}},ExpressionUUID->"feb77668-79bc-47ba-9b42-\
+f6b311278af7"],
+
+Cell["https://writings.stephenwolfram.com/", "Subsubitem",
+ CellChangeTimes->{{3.823288863241621*^9, 
+  3.8232888748559523`*^9}},ExpressionUUID->"36500898-9db5-4f43-b87c-\
+597b733decb5"],
+
+Cell["https://blog.wolfram.com/", "Subsubitem",
+ CellChangeTimes->{{3.823288863241621*^9, 
+  3.823288893486328*^9}},ExpressionUUID->"0e42df79-10db-4fad-98c7-\
+f14ad96eeb1d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Technical Support ", "Item",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288522935472*^9}, {
+  3.823288587379972*^9, 
+  3.823288587380253*^9}},ExpressionUUID->"22f27d15-349b-44b9-93bc-\
+0c8d5d89cb8c"],
+
+Cell["Support FAQ: https://support.wolfram.com/", "Subitem",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288522935472*^9}, {
+  3.823288590209681*^9, 
+  3.823288598962605*^9}},ExpressionUUID->"2cdcab63-ae28-4d39-8a44-\
+6478faf3b91e"],
+
+Cell["Contact support: https://www.wolfram.com/support/contact/", "Subitem",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288522935472*^9}, {
+  3.823288590209681*^9, 
+  3.823288620634425*^9}},ExpressionUUID->"bc01f665-8422-4503-8177-\
+0b04a7092a3e"],
+
+Cell["\<\
+Technical Consulting: https://www.wolfram.com/technical-consulting\
+\>", "Subitem",
+ CellChangeTimes->{{3.823288962946644*^9, 
+  3.8232889644475107`*^9}},ExpressionUUID->"53826979-ab7f-422c-9658-\
+e445ce58d085"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Discussion forums:", "Item",
+ CellChangeTimes->{{3.823288470152472*^9, 3.8232885036360598`*^9}, {
+  3.82328893476268*^9, 
+  3.823288947726475*^9}},ExpressionUUID->"87c7aa6c-4d57-4660-8369-\
+79c8120831e0"],
+
+Cell["Wolfram Community: https://community.wolfram.com", "Subitem",
+ CellChangeTimes->{{3.823288470152472*^9, 3.8232885036360598`*^9}, {
+  3.82328893476268*^9, 
+  3.823288950606069*^9}},ExpressionUUID->"5b7eb700-9a76-4905-8406-\
+ce0b0fd63899"],
+
+Cell["Stack Exchange: https://mathematica.stackexchange.com/", "Subitem",
+ CellChangeTimes->{{3.823288470152472*^9, 3.823288507745377*^9}, {
+  3.8232889699679203`*^9, 
+  3.8232889862747097`*^9}},ExpressionUUID->"aa4830c5-f196-413a-92fd-\
+657e8f02fe33"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Resources", "Subsection",
+ CellChangeTimes->{{3.8232871683760157`*^9, 
+  3.823287175081045*^9}},ExpressionUUID->"93b0a176-5bd3-4475-9dcf-\
+049c66a021b1"],
+
+Cell[CellGroupData[{
+
+Cell["Neural Networks and GPU processing", "Subsubsection",
+ CellChangeTimes->{{3.823287183106435*^9, 
+  3.82328719213659*^9}},ExpressionUUID->"a9f8415a-2c5a-4f65-88cb-\
+ab2451ca587f"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{
+  "\"http://reference.wolfram.com/language/tutorial/NeuralNetworksOverview.\
+html\"", "http://reference.wolfram.com/language/tutorial/\
+NeuralNetworksOverview.html"},
+  "HyperlinkURL"]], "Input",
+ TextClipboardType->
+  "PlainText",ExpressionUUID->"8a5976ee-79af-4d41-9644-00666799abc8"]], "Item",\
+
+ CellChangeTimes->{
+  3.823289232385808*^9},ExpressionUUID->"055e49a7-a116-4ca9-8274-\
+41bd40e7df89"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{
+  "\"http://reference.wolfram.com/language/workflow/\
+RunNeuralNetworkTrainingOnGPUs.html\"", 
+   "http://reference.wolfram.com/language/workflow/\
+RunNeuralNetworkTrainingOnGPUs.html"},
+  "HyperlinkURL"]], "Input",
+ TextClipboardType->
+  "PlainText",ExpressionUUID->"0511939d-e6e7-454b-bb71-fa73e69f07b8"]], "Item",\
+
+ CellChangeTimes->{{3.82328927731886*^9, 
+  3.823289277659747*^9}},ExpressionUUID->"2dcbffde-61f5-43fc-8275-\
+bfb9d021d04c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Working with Large Data Sets", "Subsubsection",
+ CellChangeTimes->{{3.8232871954802303`*^9, 
+  3.823287203326606*^9}},ExpressionUUID->"d5df879c-6f30-45d5-aa7e-\
+4f2acbc22c29"],
+
+Cell["\<\
+http://reference.wolframcloud.com/language/tutorial/LoadingNumericalData.html\
+\
+\>", "Item",
+ CellChangeTimes->{{3.823289354295514*^9, 
+  3.823289354661377*^9}},ExpressionUUID->"247fb8f0-f9a3-490a-99ef-\
+172c69d4ec5f"],
+
+Cell["\<\
+https://reference.wolfram.com/language/tutorial/NeuralNetworksLargeDatasets.\
+html\
+\>", "Item",
+ CellChangeTimes->{{3.823289331498423*^9, 
+  3.82328933181632*^9}},ExpressionUUID->"abef5231-4bb9-4825-b6d2-\
+a789d2b79332"],
+
+Cell["\<\
+Demystifying large datasets: https://www.youtube.com/watch?v=UBvjavJGWAg\
+\>", "Item",
+ CellChangeTimes->{{3.823289495484271*^9, 
+  3.82328950116053*^9}},ExpressionUUID->"0b7e18d4-c0d1-4bab-84de-\
+f6ae333fc828"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Quiz Links", "Section",
+ CellChangeTimes->{{3.823350583308773*^9, 
+  3.823350585265984*^9}},ExpressionUUID->"230a0735-5307-410e-8d96-\
+e56526f43548"],
+
+Cell["https://wolfr.am/TAkF3pHi ", "Text",
+ CellChangeTimes->{{3.823350572587859*^9, 
+  3.823350609386413*^9}},ExpressionUUID->"49817240-1a63-4bad-be3f-\
+8b38377fafa7"],
+
+Cell["\<\
+https://wolfr.am/TAkGjQk7
+\
+\>", "Text",
+ CellChangeTimes->{{3.823350572587859*^9, 
+  3.823350630975707*^9}},ExpressionUUID->"3332de55-0e7e-4b0b-b8c5-\
+df6933d7de56"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1279, 855},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"55b1f3ac-4954-49ba-849a-6f0a16c5f4c5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Functional Programming"->{
+  Cell[69895, 1685, 497, 13, 148, "Text",ExpressionUUID->"5bc1cf06-701e-4364-b925-7e28c9dadb98",
+   CellTags->"Functional Programming"],
+  Cell[70395, 1700, 260, 6, 70, "CodeText",ExpressionUUID->"b438c858-1a3b-4905-92d4-03ca1fb46929",
+   CellTags->"Functional Programming"],
+  Cell[70658, 1708, 212, 5, 55, "Input",ExpressionUUID->"bcb711d5-ac96-41a4-a541-a9e4e531057a",
+   CellTags->"Functional Programming"],
+  Cell[70873, 1715, 297, 7, 108, "CodeText",ExpressionUUID->"85897fce-91e3-477e-85bb-cf897ace36e9",
+   CellTags->"Functional Programming"],
+  Cell[71173, 1724, 242, 6, 55, "Input",ExpressionUUID->"e4b5d27a-d377-4f91-abc6-51f2ebcf94ff",
+   CellTags->"Functional Programming"],
+  Cell[71418, 1732, 273, 7, 108, "CodeText",ExpressionUUID->"02fa8f5d-37bf-4bbf-84e8-ff2b305107cf",
+   CellTags->"Functional Programming"],
+  Cell[71694, 1741, 176, 4, 55, "Input",ExpressionUUID->"9fd37223-f5c0-4b7a-896a-1a99872114d2",
+   CellTags->"Functional Programming"],
+  Cell[71873, 1747, 324, 7, 108, "CodeText",ExpressionUUID->"83293434-3a70-4dbe-aa23-f05ed95a6815",
+   CellTags->"Functional Programming"],
+  Cell[72200, 1756, 230, 6, 55, "Input",ExpressionUUID->"1abcc931-bb7c-4544-b11e-42f15c9c2992",
+   CellTags->"Functional Programming"],
+  Cell[72433, 1764, 321, 8, 108, "CodeText",ExpressionUUID->"7babde5e-0772-4a25-ab02-9007b2560b34",
+   CellTags->"Functional Programming"],
+  Cell[72757, 1774, 291, 8, 55, "Input",ExpressionUUID->"5e8afda2-70e1-43cb-b804-41d22da754c8",
+   CellTags->"Functional Programming"],
+  Cell[73258, 1792, 505, 17, 106, "Text",ExpressionUUID->"baf554ea-c1e7-440a-a24e-bf9618fc7906",
+   CellTags->"Functional Programming"],
+  Cell[73766, 1811, 258, 6, 70, "CodeText",ExpressionUUID->"48960786-c1a6-4a8e-a6a5-067abc301999",
+   CellTags->"Functional Programming"],
+  Cell[74027, 1819, 310, 9, 55, "Input",ExpressionUUID->"89ba35e4-08ea-4dfa-85ce-fbdd83a2a43f",
+   CellTags->"Functional Programming"],
+  Cell[74340, 1830, 426, 12, 109, "CodeText",ExpressionUUID->"5ce63587-a16a-402a-b18b-e1fcd0089593",
+   CellTags->"Functional Programming"],
+  Cell[74769, 1844, 490, 14, 60, "Input",ExpressionUUID->"2bc9a776-04d7-4ee5-93f5-e3ea56f9ff6f",
+   CellTags->"Functional Programming"],
+  Cell[75262, 1860, 426, 11, 106, "Text",ExpressionUUID->"da4869d4-c0c7-4165-907b-14639028a659",
+   CellTags->"Functional Programming"],
+  Cell[75691, 1873, 414, 12, 109, "CodeText",ExpressionUUID->"52d11bf9-ccc8-42e0-a315-d884f152c52d",
+   CellTags->"Functional Programming"],
+  Cell[76108, 1887, 587, 17, 95, "Input",ExpressionUUID->"078801d1-997d-4bff-919d-69432a8e1b6b",
+   CellTags->"Functional Programming"],
+  Cell[76698, 1906, 242, 4, 70, "CodeText",ExpressionUUID->"30bc2c0e-33a9-4258-8e15-303eed412fee",
+   CellTags->"Functional Programming"],
+  Cell[76943, 1912, 548, 15, 134, "Input",ExpressionUUID->"132e34c2-13c7-4c59-9609-93bc751796e2",
+   CellTags->"Functional Programming"],
+  Cell[77772, 1938, 619, 18, 149, "Text",ExpressionUUID->"670bd785-5151-4abc-a993-b739edc4a00a",
+   CellTags->"Functional Programming"],
+  Cell[79361, 1993, 835, 24, 146, "CodeText",ExpressionUUID->"7d3a43d9-62ca-4276-ab96-13dfbe746268",
+   CellTags->"Functional Programming"],
+  Cell[80199, 2019, 793, 23, 146, "Input",ExpressionUUID->"3c86a429-b433-4282-862d-1d0ef190c9f0",
+   CellTags->"Functional Programming"],
+  Cell[80995, 2044, 941, 29, 186, "CodeText",ExpressionUUID->"1455d691-9098-4870-b519-05682debb90b",
+   CellTags->"Functional Programming"]},
+ "Basic Principles"->{
+  Cell[89962, 2319, 926, 30, 148, "Text",ExpressionUUID->"49c8b92d-f08e-4a50-a9ea-9b5f2031ed84",
+   CellTags->"Basic Principles"],
+  Cell[90891, 2351, 710, 22, 146, "CodeText",ExpressionUUID->"bc307052-aa11-4518-9976-31169855dafc",
+   CellTags->"Basic Principles"],
+  Cell[91604, 2375, 174, 3, 55, "Input",ExpressionUUID->"35f7a940-b27a-4877-bbe0-a8cabd09bce6",
+   CellTags->"Basic Principles"],
+  Cell[91781, 2380, 168, 3, 55, "Input",ExpressionUUID->"a22954cd-2814-461d-92ef-dea2982b8182",
+   CellTags->"Basic Principles"],
+  Cell[91952, 2385, 449, 11, 148, "Text",ExpressionUUID->"eae41bfc-f76a-4797-860d-1a36062f7412",
+   CellTags->"Basic Principles"]},
+ "Options and Messages"->{
+  Cell[94510, 2468, 761, 25, 146, "CodeText",ExpressionUUID->"57c1ec2c-eff1-40c3-b35b-dcf50cdbae8e",
+   CellTags->"Options and Messages"],
+  Cell[95274, 2495, 184, 5, 55, "Input",ExpressionUUID->"8d22814e-88e5-4e21-8edb-5ac9dab6982b",
+   CellTags->"Options and Messages"],
+  Cell[95461, 2502, 627, 19, 108, "CodeText",ExpressionUUID->"3dd2278f-950c-4c0b-9619-6cb7c4e7448b",
+   CellTags->"Options and Messages"],
+  Cell[96091, 2523, 442, 13, 69, "Input",ExpressionUUID->"d0ec6527-16c9-44d9-984e-a35d20e55b98",
+   CellTags->"Options and Messages"],
+  Cell[96536, 2538, 761, 25, 146, "CodeText",ExpressionUUID->"236b675b-661b-453b-a765-082c042bde8a",
+   CellTags->"Options and Messages"],
+  Cell[97300, 2565, 184, 5, 55, "Input",ExpressionUUID->"a2598adb-973b-4298-befd-b7cd4db30a81",
+   CellTags->"Options and Messages"],
+  Cell[97487, 2572, 627, 19, 108, "CodeText",ExpressionUUID->"38b0c3fb-66a2-49fc-ad94-7e1a04f3e880",
+   CellTags->"Options and Messages"],
+  Cell[98117, 2593, 442, 13, 69, "Input",ExpressionUUID->"7dbf3b1b-1c94-4cd7-8eb9-dc36598c197e",
+   CellTags->"Options and Messages"],
+  Cell[98584, 2610, 202, 4, 84, "Subsubsection",ExpressionUUID->"c04737d8-a4e9-451c-a97f-5ba8a5beddac",
+   CellTags->"Options and Messages"],
+  Cell[98789, 2616, 288, 7, 148, "Text",ExpressionUUID->"92c588b9-cb37-42ca-9f34-a3814dffff5c",
+   CellTags->"Options and Messages"],
+  Cell[99080, 2625, 383, 12, 108, "CodeText",ExpressionUUID->"841f78e2-92e2-4932-948d-974ffe86f163",
+   CellTags->"Options and Messages"],
+  Cell[99466, 2639, 311, 8, 55, "Input",ExpressionUUID->"f5a7ef4e-76e6-4453-900b-91545713b908",
+   CellTags->"Options and Messages"],
+  Cell[99780, 2649, 650, 20, 108, "CodeText",ExpressionUUID->"c1956f4f-f6ab-4b8b-a585-669dd28a5a66",
+   CellTags->"Options and Messages"],
+  Cell[100433, 2671, 410, 11, 90, "Input",ExpressionUUID->"20586804-de67-4c6e-a403-43b8ed9a4743",
+   CellTags->"Options and Messages"],
+  Cell[100846, 2684, 317, 8, 108, "CodeText",ExpressionUUID->"f95055af-ec11-4d3e-946e-8af6fa14a57f",
+   CellTags->"Options and Messages"],
+  Cell[101166, 2694, 167, 3, 55, "Input",ExpressionUUID->"29a83c42-0e4f-4024-8094-6a5b3796326e",
+   CellTags->"Options and Messages"],
+  Cell[101336, 2699, 292, 7, 108, "CodeText",ExpressionUUID->"14e385ac-53e2-4ef5-9707-3825182c0cf0",
+   CellTags->"Options and Messages"],
+  Cell[101631, 2708, 279, 6, 55, "Input",ExpressionUUID->"f944f335-ce7d-4cd1-96b7-a841979ef090",
+   CellTags->"Options and Messages"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Functional Programming", 132863, 3603},
+ {"Basic Principles", 136342, 3654},
+ {"Options and Messages", 137027, 3665}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 205, 3, 299, "Title",ExpressionUUID->"d2fea56d-e957-400d-8c1a-8b21c29ba733"],
+Cell[788, 27, 216, 4, 100, "Subtitle",ExpressionUUID->"e240833b-dbae-4dd2-b8a2-725ab3ddcd86"],
+Cell[CellGroupData[{
+Cell[1029, 35, 168, 3, 126, "Section",ExpressionUUID->"15c87847-3d0f-44b9-b648-d13708da8600"],
+Cell[1200, 40, 24082, 569, 702, "Input",ExpressionUUID->"8fde8578-6140-4fe4-a559-d7956d4014fb"],
+Cell[CellGroupData[{
+Cell[25307, 613, 177, 3, 101, "Subsection",ExpressionUUID->"9784b055-2fa0-421b-98d6-58346cd9386c"],
+Cell[25487, 618, 20052, 478, 699, "Input",ExpressionUUID->"eb4a7645-5eb7-4b41-8d32-c39ac9ad8dd3"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[45576, 1101, 155, 3, 67, "Subsection",ExpressionUUID->"5d6cdf7c-af80-4b9d-b8c7-ab9287fbdc40"],
+Cell[45734, 1106, 23267, 546, 686, "Input",ExpressionUUID->"4c47e6e7-1ba2-4814-aea5-7dabfaac40c4"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[69050, 1658, 220, 4, 126, "Section",ExpressionUUID->"6b71b0e2-401e-4b3d-b118-741589dea75c"],
+Cell[69273, 1664, 209, 4, 64, "Text",ExpressionUUID->"ab5216d8-41aa-405c-bb43-bce2ac6480a6"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[69519, 1673, 186, 3, 96, "Section",ExpressionUUID->"94ee4311-f75d-4792-8bbc-4441ccf94b61"],
+Cell[CellGroupData[{
+Cell[69730, 1680, 162, 3, 101, "Subsection",ExpressionUUID->"cea51596-60c3-45ef-b39a-65bb539797de"],
+Cell[69895, 1685, 497, 13, 148, "Text",ExpressionUUID->"5bc1cf06-701e-4364-b925-7e28c9dadb98",
+ CellTags->"Functional Programming"],
+Cell[70395, 1700, 260, 6, 70, "CodeText",ExpressionUUID->"b438c858-1a3b-4905-92d4-03ca1fb46929",
+ CellTags->"Functional Programming"],
+Cell[70658, 1708, 212, 5, 55, "Input",ExpressionUUID->"bcb711d5-ac96-41a4-a541-a9e4e531057a",
+ CellTags->"Functional Programming"],
+Cell[70873, 1715, 297, 7, 108, "CodeText",ExpressionUUID->"85897fce-91e3-477e-85bb-cf897ace36e9",
+ CellTags->"Functional Programming"],
+Cell[71173, 1724, 242, 6, 55, "Input",ExpressionUUID->"e4b5d27a-d377-4f91-abc6-51f2ebcf94ff",
+ CellTags->"Functional Programming"],
+Cell[71418, 1732, 273, 7, 108, "CodeText",ExpressionUUID->"02fa8f5d-37bf-4bbf-84e8-ff2b305107cf",
+ CellTags->"Functional Programming"],
+Cell[71694, 1741, 176, 4, 55, "Input",ExpressionUUID->"9fd37223-f5c0-4b7a-896a-1a99872114d2",
+ CellTags->"Functional Programming"],
+Cell[71873, 1747, 324, 7, 108, "CodeText",ExpressionUUID->"83293434-3a70-4dbe-aa23-f05ed95a6815",
+ CellTags->"Functional Programming"],
+Cell[72200, 1756, 230, 6, 55, "Input",ExpressionUUID->"1abcc931-bb7c-4544-b11e-42f15c9c2992",
+ CellTags->"Functional Programming"],
+Cell[72433, 1764, 321, 8, 108, "CodeText",ExpressionUUID->"7babde5e-0772-4a25-ab02-9007b2560b34",
+ CellTags->"Functional Programming"],
+Cell[72757, 1774, 291, 8, 55, "Input",ExpressionUUID->"5e8afda2-70e1-43cb-b804-41d22da754c8",
+ CellTags->"Functional Programming"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[73085, 1787, 170, 3, 67, "Subsection",ExpressionUUID->"8a1f1661-0398-49dc-b538-a6dd4de873be"],
+Cell[73258, 1792, 505, 17, 106, "Text",ExpressionUUID->"baf554ea-c1e7-440a-a24e-bf9618fc7906",
+ CellTags->"Functional Programming"],
+Cell[73766, 1811, 258, 6, 70, "CodeText",ExpressionUUID->"48960786-c1a6-4a8e-a6a5-067abc301999",
+ CellTags->"Functional Programming"],
+Cell[74027, 1819, 310, 9, 55, "Input",ExpressionUUID->"89ba35e4-08ea-4dfa-85ce-fbdd83a2a43f",
+ CellTags->"Functional Programming"],
+Cell[74340, 1830, 426, 12, 109, "CodeText",ExpressionUUID->"5ce63587-a16a-402a-b18b-e1fcd0089593",
+ CellTags->"Functional Programming"],
+Cell[74769, 1844, 490, 14, 60, "Input",ExpressionUUID->"2bc9a776-04d7-4ee5-93f5-e3ea56f9ff6f",
+ CellTags->"Functional Programming"],
+Cell[75262, 1860, 426, 11, 106, "Text",ExpressionUUID->"da4869d4-c0c7-4165-907b-14639028a659",
+ CellTags->"Functional Programming"],
+Cell[75691, 1873, 414, 12, 109, "CodeText",ExpressionUUID->"52d11bf9-ccc8-42e0-a315-d884f152c52d",
+ CellTags->"Functional Programming"],
+Cell[76108, 1887, 587, 17, 95, "Input",ExpressionUUID->"078801d1-997d-4bff-919d-69432a8e1b6b",
+ CellTags->"Functional Programming"],
+Cell[76698, 1906, 242, 4, 70, "CodeText",ExpressionUUID->"30bc2c0e-33a9-4258-8e15-303eed412fee",
+ CellTags->"Functional Programming"],
+Cell[76943, 1912, 548, 15, 134, "Input",ExpressionUUID->"132e34c2-13c7-4c59-9609-93bc751796e2",
+ CellTags->"Functional Programming"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[77528, 1932, 241, 4, 67, "Subsection",ExpressionUUID->"79085928-a0ef-443b-be04-d00ccec9696e"],
+Cell[77772, 1938, 619, 18, 149, "Text",ExpressionUUID->"670bd785-5151-4abc-a993-b739edc4a00a",
+ CellTags->"Functional Programming"],
+Cell[78394, 1958, 379, 13, 108, "CodeText",ExpressionUUID->"9e7c2411-1186-4507-9633-8ec388760a57"],
+Cell[78776, 1973, 582, 18, 123, "Input",ExpressionUUID->"226ddd08-547d-4a77-8a33-7d59a360b247"],
+Cell[79361, 1993, 835, 24, 146, "CodeText",ExpressionUUID->"7d3a43d9-62ca-4276-ab96-13dfbe746268",
+ CellTags->"Functional Programming"],
+Cell[80199, 2019, 793, 23, 146, "Input",ExpressionUUID->"3c86a429-b433-4282-862d-1d0ef190c9f0",
+ CellTags->"Functional Programming"],
+Cell[80995, 2044, 941, 29, 186, "CodeText",ExpressionUUID->"1455d691-9098-4870-b519-05682debb90b",
+ CellTags->"Functional Programming"],
+Cell[81939, 2075, 882, 26, 173, "Input",ExpressionUUID->"898b1642-36ef-465c-aa6d-10f05dd21392"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[82858, 2106, 187, 3, 67, "Subsection",ExpressionUUID->"0bf2236f-5a36-4138-abc1-ccf97604c54d"],
+Cell[83048, 2111, 245, 5, 76, "Input",ExpressionUUID->"5eb7af0a-742c-46c3-87e6-0e280c3716c9"],
+Cell[83296, 2118, 241, 5, 76, "Input",ExpressionUUID->"c96d961d-ffcd-4027-9c42-803bf97a9f7b"],
+Cell[83540, 2125, 189, 4, 55, "Input",ExpressionUUID->"6febb54e-66ff-4c70-92c0-f7819b281bfe"],
+Cell[83732, 2131, 189, 4, 55, "Input",ExpressionUUID->"3f2ba190-ee34-4bcb-a298-fbcb87e93c49"],
+Cell[83924, 2137, 212, 4, 76, "Input",ExpressionUUID->"1b045688-86ec-4e9f-8105-259b9c5f1122"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[84173, 2146, 209, 3, 67, "Subsection",ExpressionUUID->"3e8bf036-8234-4d54-8b6b-5c744f9c7604"],
+Cell[84385, 2151, 350, 8, 76, "Input",ExpressionUUID->"35f4a263-0920-42ad-9950-00b9ee475052"],
+Cell[84738, 2161, 267, 6, 76, "Input",ExpressionUUID->"e2b95928-98f4-41c7-84a8-27dac13f3ccb"],
+Cell[85008, 2169, 398, 9, 76, "Input",ExpressionUUID->"42b6639b-a5bf-4b70-bbeb-a057bec35eaa"],
+Cell[85409, 2180, 223, 4, 76, "Input",ExpressionUUID->"9911c0a9-0480-40bd-ab3d-b2f11b1ea1aa"],
+Cell[85635, 2186, 217, 4, 76, "Input",ExpressionUUID->"8996ae91-aea0-4a81-b59a-a82cb3292f3f"],
+Cell[85855, 2192, 374, 7, 76, "Input",ExpressionUUID->"96d640cc-f03c-4096-8ee1-98886b69d980"],
+Cell[86232, 2201, 436, 11, 76, "Input",ExpressionUUID->"f7c812fb-e356-4be7-b7bd-8f090c816897"],
+Cell[86671, 2214, 362, 9, 76, "Input",ExpressionUUID->"bd9f3673-33a4-4584-9f7c-b3a5d9307f0e"],
+Cell[87036, 2225, 452, 14, 114, "Text",ExpressionUUID->"ab25dfa1-b4e3-4088-a636-1ef96ad760dc"],
+Cell[87491, 2241, 181, 4, 55, "Input",ExpressionUUID->"55df8f68-245f-4d74-9bf1-79d95629f475"],
+Cell[87675, 2247, 322, 8, 76, "Input",ExpressionUUID->"2457b10c-51ef-46ba-bc49-bb6e40187a4e"],
+Cell[88000, 2257, 411, 11, 76, "Input",ExpressionUUID->"63c1b0c5-6d03-4ac7-b631-1c361b56edfd"],
+Cell[88414, 2270, 382, 10, 76, "Input",ExpressionUUID->"8139ef0d-bd83-4fa1-a6f9-16ee1fa49118"],
+Cell[88799, 2282, 580, 16, 116, "Input",ExpressionUUID->"8fb5754c-6bd1-4fbe-b00b-328109cf83cb"],
+Cell[89382, 2300, 359, 9, 76, "Input",ExpressionUUID->"09a526be-f05e-455c-ba52-f95202deaed1"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[89778, 2314, 181, 3, 67, "Subsection",ExpressionUUID->"e36f1d8a-b2dc-45cc-9d5e-71afae23a459"],
+Cell[89962, 2319, 926, 30, 148, "Text",ExpressionUUID->"49c8b92d-f08e-4a50-a9ea-9b5f2031ed84",
+ CellTags->"Basic Principles"],
+Cell[90891, 2351, 710, 22, 146, "CodeText",ExpressionUUID->"bc307052-aa11-4518-9976-31169855dafc",
+ CellTags->"Basic Principles"],
+Cell[91604, 2375, 174, 3, 55, "Input",ExpressionUUID->"35f7a940-b27a-4877-bbe0-a8cabd09bce6",
+ CellTags->"Basic Principles"],
+Cell[91781, 2380, 168, 3, 55, "Input",ExpressionUUID->"a22954cd-2814-461d-92ef-dea2982b8182",
+ CellTags->"Basic Principles"],
+Cell[91952, 2385, 449, 11, 148, "Text",ExpressionUUID->"eae41bfc-f76a-4797-860d-1a36062f7412",
+ CellTags->"Basic Principles"],
+Cell[92404, 2398, 535, 16, 95, "Input",ExpressionUUID->"f1c4f4e5-68a7-4156-95ec-3bbb02a6db03"],
+Cell[92942, 2416, 185, 3, 64, "Text",ExpressionUUID->"cebe6ac9-c168-4700-aa9b-0a7a92bca8b4"],
+Cell[93130, 2421, 332, 10, 55, "Input",ExpressionUUID->"8c197caa-684c-4e01-8de9-3fbecd940212"],
+Cell[93465, 2433, 248, 6, 106, "Text",ExpressionUUID->"dd1e0754-6e61-4fc4-a86c-5475c5c2afb4"],
+Cell[93716, 2441, 580, 17, 95, "Input",ExpressionUUID->"27a557f1-669b-4f94-bc4b-5adb26648de0"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[94333, 2463, 174, 3, 67, "Subsection",ExpressionUUID->"da4582f8-2d8e-417f-a073-688d544133aa"],
+Cell[94510, 2468, 761, 25, 146, "CodeText",ExpressionUUID->"57c1ec2c-eff1-40c3-b35b-dcf50cdbae8e",
+ CellTags->"Options and Messages"],
+Cell[95274, 2495, 184, 5, 55, "Input",ExpressionUUID->"8d22814e-88e5-4e21-8edb-5ac9dab6982b",
+ CellTags->"Options and Messages"],
+Cell[95461, 2502, 627, 19, 108, "CodeText",ExpressionUUID->"3dd2278f-950c-4c0b-9619-6cb7c4e7448b",
+ CellTags->"Options and Messages"],
+Cell[96091, 2523, 442, 13, 69, "Input",ExpressionUUID->"d0ec6527-16c9-44d9-984e-a35d20e55b98",
+ CellTags->"Options and Messages"],
+Cell[96536, 2538, 761, 25, 146, "CodeText",ExpressionUUID->"236b675b-661b-453b-a765-082c042bde8a",
+ CellTags->"Options and Messages"],
+Cell[97300, 2565, 184, 5, 55, "Input",ExpressionUUID->"a2598adb-973b-4298-befd-b7cd4db30a81",
+ CellTags->"Options and Messages"],
+Cell[97487, 2572, 627, 19, 108, "CodeText",ExpressionUUID->"38b0c3fb-66a2-49fc-ad94-7e1a04f3e880",
+ CellTags->"Options and Messages"],
+Cell[98117, 2593, 442, 13, 69, "Input",ExpressionUUID->"7dbf3b1b-1c94-4cd7-8eb9-dc36598c197e",
+ CellTags->"Options and Messages"],
+Cell[CellGroupData[{
+Cell[98584, 2610, 202, 4, 84, "Subsubsection",ExpressionUUID->"c04737d8-a4e9-451c-a97f-5ba8a5beddac",
+ CellTags->"Options and Messages"],
+Cell[98789, 2616, 288, 7, 148, "Text",ExpressionUUID->"92c588b9-cb37-42ca-9f34-a3814dffff5c",
+ CellTags->"Options and Messages"],
+Cell[99080, 2625, 383, 12, 108, "CodeText",ExpressionUUID->"841f78e2-92e2-4932-948d-974ffe86f163",
+ CellTags->"Options and Messages"],
+Cell[99466, 2639, 311, 8, 55, "Input",ExpressionUUID->"f5a7ef4e-76e6-4453-900b-91545713b908",
+ CellTags->"Options and Messages"],
+Cell[99780, 2649, 650, 20, 108, "CodeText",ExpressionUUID->"c1956f4f-f6ab-4b8b-a585-669dd28a5a66",
+ CellTags->"Options and Messages"],
+Cell[100433, 2671, 410, 11, 90, "Input",ExpressionUUID->"20586804-de67-4c6e-a403-43b8ed9a4743",
+ CellTags->"Options and Messages"],
+Cell[100846, 2684, 317, 8, 108, "CodeText",ExpressionUUID->"f95055af-ec11-4d3e-946e-8af6fa14a57f",
+ CellTags->"Options and Messages"],
+Cell[101166, 2694, 167, 3, 55, "Input",ExpressionUUID->"29a83c42-0e4f-4024-8094-6a5b3796326e",
+ CellTags->"Options and Messages"],
+Cell[101336, 2699, 292, 7, 108, "CodeText",ExpressionUUID->"14e385ac-53e2-4ef5-9707-3825182c0cf0",
+ CellTags->"Options and Messages"],
+Cell[101631, 2708, 279, 6, 55, "Input",ExpressionUUID->"f944f335-ce7d-4cd1-96b7-a841979ef090",
+ CellTags->"Options and Messages"],
+Cell[101913, 2716, 77, 0, 39, "EndOfSlide",ExpressionUUID->"87994020-5aab-46ed-b809-c8ce62afde5b"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[102039, 2722, 177, 3, 67, "Subsection",ExpressionUUID->"f7230cbd-8135-45dd-be33-b8807d3bcc23"],
+Cell[CellGroupData[{
+Cell[102241, 2729, 156, 3, 84, "Subsubsection",ExpressionUUID->"4b911f0d-509f-48c5-8191-53f537c568a2"],
+Cell[102400, 2734, 372, 8, 106, "Text",ExpressionUUID->"4c3147c1-3a7e-41b9-973e-0e0966e7bb62"],
+Cell[CellGroupData[{
+Cell[102797, 2746, 289, 5, 70, "CodeText",ExpressionUUID->"bc4d32d7-db47-49a9-8a92-c509512190a3",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[103089, 2753, 514, 11, 95, "Input",ExpressionUUID->"926522bf-3c4c-4966-8111-870433f1fb26",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]],
+Cell[103618, 2767, 484, 9, 108, "CodeText",ExpressionUUID->"7fcecbe2-d951-486a-a867-a4d3d2401779"],
+Cell[104105, 2778, 290, 5, 55, "Input",ExpressionUUID->"2687a21f-6de5-4432-ad15-6800e6c5fe80"],
+Cell[104398, 2785, 350, 5, 70, "CodeText",ExpressionUUID->"0822da19-4806-48ec-a3b3-e352cb159312"],
+Cell[104751, 2792, 295, 5, 55, "Input",ExpressionUUID->"67f9e656-bc6e-4d42-bf6f-8f0ad265eb73"],
+Cell[105049, 2799, 416, 8, 70, "CodeText",ExpressionUUID->"50047a23-06aa-4dbb-8775-3043ec6a1dac"],
+Cell[105468, 2809, 329, 6, 55, "Input",ExpressionUUID->"4dd786a7-0100-40de-9689-50062b548a71"],
+Cell[105800, 2817, 360, 5, 70, "CodeText",ExpressionUUID->"aead8d89-3473-48d6-90c8-572284b1c67a"],
+Cell[106163, 2824, 366, 8, 55, "Input",ExpressionUUID->"ce900756-d0cc-463d-adda-4fe29149cb59"],
+Cell[106532, 2834, 404, 6, 70, "CodeText",ExpressionUUID->"8764d228-a5b8-40b7-af41-1abadf16216c"],
+Cell[106939, 2842, 1086, 25, 95, "Input",ExpressionUUID->"d5375d14-502d-46b6-a568-8680bb41e302"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[108062, 2872, 162, 3, 84, "Subsubsection",ExpressionUUID->"159c4d26-12b6-40f1-b817-dd3ff6d2a6b0"],
+Cell[108227, 2877, 597, 14, 64, "Text",ExpressionUUID->"2647eb97-e69a-4ef5-9a9b-e5aebf6bb5f7"],
+Cell[108827, 2893, 480, 9, 189, "Text",ExpressionUUID->"cf4baf51-9060-4d09-9890-d65e7e65d807"],
+Cell[109310, 2904, 170, 2, 70, "CodeText",ExpressionUUID->"a43c5f2c-3161-48a2-8842-0b76030199e9"],
+Cell[109483, 2908, 423, 11, 55, "Input",ExpressionUUID->"dbe53e5b-6ce5-4662-a89c-db4e21dfab46"],
+Cell[109909, 2921, 300, 5, 70, "CodeText",ExpressionUUID->"f0eab2bd-122d-4eae-9423-afd89280990a"],
+Cell[110212, 2928, 209, 4, 55, "Input",ExpressionUUID->"aa530ee0-9d39-4730-8063-05607da788df"],
+Cell[110424, 2934, 209, 5, 55, "Input",ExpressionUUID->"feb760f7-cfce-44ad-884c-1223bf4f52a4"],
+Cell[110636, 2941, 240, 6, 55, "Input",ExpressionUUID->"0c1109af-6d95-4ff4-bc53-057bf7c714eb"],
+Cell[110879, 2949, 294, 6, 70, "CodeText",ExpressionUUID->"66c8fa00-26e3-42de-84b7-761c653f8e4f"],
+Cell[111176, 2957, 209, 5, 55, "Input",ExpressionUUID->"c4cb779f-0a66-4edd-8203-dcbf4a557cfa"],
+Cell[111388, 2964, 182, 4, 55, "Input",ExpressionUUID->"f14cf5ad-c377-4a2e-adca-048b50ff0dd2"],
+Cell[111573, 2970, 258, 7, 55, "Input",ExpressionUUID->"baa24a87-6532-4692-bfd5-09e850118e91"],
+Cell[111834, 2979, 190, 4, 55, "Input",ExpressionUUID->"220cd487-7dc6-409f-91d8-44a7b3c72e20"],
+Cell[112027, 2985, 272, 4, 70, "CodeText",ExpressionUUID->"82b0f1c0-b7ac-4b01-ae06-b482223a8c4a"],
+Cell[112302, 2991, 214, 5, 55, "Input",ExpressionUUID->"5b440670-c07e-4c95-8cfd-70c16a7936e5"],
+Cell[112519, 2998, 190, 4, 55, "Input",ExpressionUUID->"f1d056f6-f421-43bd-aaba-6d6192c42e0f"],
+Cell[112712, 3004, 266, 4, 70, "CodeText",ExpressionUUID->"e56eaaea-c008-4db7-9c61-900cb6ac7047"],
+Cell[112981, 3010, 189, 4, 55, "Input",ExpressionUUID->"7c5a4149-a91b-4708-9b3c-e634ba00352d"],
+Cell[113173, 3016, 191, 4, 55, "Input",ExpressionUUID->"e678aa9b-c102-49e0-a86c-35de6d075f84"],
+Cell[113367, 3022, 766, 19, 108, "CodeText",ExpressionUUID->"69b29ee5-1038-4495-8d6a-2c6a34340d50"],
+Cell[114136, 3043, 216, 5, 55, "Input",ExpressionUUID->"0de8be9c-f2f8-4ab6-ab6f-802154ac28af"],
+Cell[114355, 3050, 359, 9, 55, "Input",ExpressionUUID->"a78cf961-e0a1-4890-a8f8-ea074493283c"],
+Cell[114717, 3061, 816, 23, 106, "Text",ExpressionUUID->"540a2233-8f83-4774-9a0b-76ac4f4b00ae"],
+Cell[115536, 3086, 365, 8, 55, "Input",ExpressionUUID->"1205571f-a388-4286-91f9-8f698d1f4f2b"],
+Cell[115904, 3096, 176, 3, 70, "CodeText",ExpressionUUID->"ec24877c-d846-4b12-b7d8-9d806473a0a5"],
+Cell[116083, 3101, 461, 12, 95, "Input",ExpressionUUID->"bbb73a8c-04ee-47d9-bafc-6e54fb165ae9"],
+Cell[116547, 3115, 152, 3, 70, "CodeText",ExpressionUUID->"fee3d0b5-e8dc-43f3-b8fd-519fded00211"],
+Cell[116702, 3120, 295, 7, 55, "Input",ExpressionUUID->"8d866fe3-cb5b-4aa5-b805-ba4228096f14"],
+Cell[117000, 3129, 317, 8, 55, "Input",ExpressionUUID->"f8c06fb7-2d36-4629-a393-eeb1a39c7952"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[117354, 3142, 158, 3, 84, "Subsubsection",ExpressionUUID->"eba71bca-78a4-4361-b798-41f05a6fd739"],
+Cell[117515, 3147, 409, 12, 106, "Text",ExpressionUUID->"f03d20c1-da9e-4167-92b4-9252efb20ea9"],
+Cell[117927, 3161, 378, 9, 148, "Text",ExpressionUUID->"ee6d0e00-0dfc-4528-ba5e-5efe25c0cfa6"],
+Cell[118308, 3172, 1448, 36, 251, "Input",ExpressionUUID->"ccce9e52-23a1-4407-90e6-ad8fb71eabcf"],
+Cell[119759, 3210, 276, 6, 108, "CodeText",ExpressionUUID->"bf931d81-b5f7-48bb-9894-a6f76b08f804"],
+Cell[120038, 3218, 216, 4, 55, "Input",ExpressionUUID->"161985f7-1d7c-492b-a1ac-7b14b64f188d"],
+Cell[120257, 3224, 347, 9, 108, "CodeText",ExpressionUUID->"704e4029-7fa8-4b6e-8988-c97a09b242cb"],
+Cell[120607, 3235, 231, 5, 95, "Input",ExpressionUUID->"4915fee5-2f83-44a3-b056-fc7db40bb78f"],
+Cell[120841, 3242, 197, 3, 70, "CodeText",ExpressionUUID->"6e4c52f6-c0a0-48c6-b128-bb0f88c22455"],
+Cell[121041, 3247, 223, 4, 55, "Input",ExpressionUUID->"d4d25e8e-b8d3-4f49-9d9a-dcb01c55edf5"],
+Cell[121267, 3253, 336, 9, 70, "CodeText",ExpressionUUID->"e21a942c-c807-4c5b-9e65-a290424050e3"],
+Cell[121606, 3264, 279, 6, 55, "Input",ExpressionUUID->"f55834df-0947-4800-8352-a84388324dbf"],
+Cell[121888, 3272, 328, 9, 70, "CodeText",ExpressionUUID->"d52994f8-665f-4c77-8cce-8bf52a82b492"],
+Cell[122219, 3283, 304, 6, 55, "Input",ExpressionUUID->"1b296acf-bc46-4b29-9641-5f2f871b6362"],
+Cell[122526, 3291, 178, 3, 70, "CodeText",ExpressionUUID->"2390ee3a-dd05-47be-83a7-ba3c0c5c2dab"],
+Cell[122707, 3296, 307, 6, 55, "Input",ExpressionUUID->"45e66566-a76f-41d7-9bc8-9f88a47bbdf5"],
+Cell[123017, 3304, 239, 4, 70, "CodeText",ExpressionUUID->"a12c5036-5e52-4e57-969e-beb41ed6aae6"],
+Cell[123259, 3310, 602, 14, 134, "Input",ExpressionUUID->"280b6096-747b-479e-9e48-2fd5b16cf984"],
+Cell[123864, 3326, 324, 7, 108, "CodeText",ExpressionUUID->"6d84ce85-892c-4168-a1e7-3403abe3753e"],
+Cell[124191, 3335, 559, 14, 134, "Input",ExpressionUUID->"31a53f8b-5c30-477f-bf5f-5e2734ff3887"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[124799, 3355, 168, 3, 67, "Subsection",ExpressionUUID->"e2bdbf19-8ec3-4a2d-8074-31f673c5aa4d"],
+Cell[124970, 3360, 274, 8, 64, "Text",ExpressionUUID->"11dbb51d-991b-4089-b9fb-d9b20b18fb40"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[125281, 3373, 194, 3, 101, "Subsection",ExpressionUUID->"40cee37a-7364-4018-b8a4-38557adbde28"],
+Cell[125478, 3378, 177, 3, 64, "Text",ExpressionUUID->"c62e601e-b7b0-4715-992f-8474667f7f44"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[125692, 3386, 167, 3, 67, "Subsection",ExpressionUUID->"c57f6608-aa5e-4b0b-b2a4-4ff6888d8098"],
+Cell[125862, 3391, 242, 4, 60, "Item",ExpressionUUID->"fd6367c5-4180-4c15-8203-279ae5424a6e"],
+Cell[CellGroupData[{
+Cell[126129, 3399, 253, 4, 60, "Item",ExpressionUUID->"c9bbc58a-1d89-43d5-bb28-80d110333a16"],
+Cell[126385, 3405, 288, 4, 50, "Subitem",ExpressionUUID->"edee712b-ae5b-4315-b247-d4cb0983663f"],
+Cell[126676, 3411, 342, 5, 50, "Subitem",ExpressionUUID->"7d8df0aa-17d0-48f1-aef0-eb3e7f4d1ebc"],
+Cell[127021, 3418, 332, 5, 50, "Subitem",ExpressionUUID->"94793b37-0f20-46e0-9c95-ad77590a4761"],
+Cell[CellGroupData[{
+Cell[127378, 3427, 154, 3, 50, "Subitem",ExpressionUUID->"feb77668-79bc-47ba-9b42-f6b311278af7"],
+Cell[127535, 3432, 186, 3, 47, "Subsubitem",ExpressionUUID->"36500898-9db5-4f43-b87c-597b733decb5"],
+Cell[127724, 3437, 173, 3, 47, "Subsubitem",ExpressionUUID->"0e42df79-10db-4fad-98c7-f14ad96eeb1d"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[127946, 3446, 209, 4, 60, "Item",ExpressionUUID->"22f27d15-349b-44b9-93bc-0c8d5d89cb8c"],
+Cell[128158, 3452, 235, 4, 50, "Subitem",ExpressionUUID->"2cdcab63-ae28-4d39-8a44-6478faf3b91e"],
+Cell[128396, 3458, 251, 4, 50, "Subitem",ExpressionUUID->"bc01f665-8422-4503-8177-0b04a7092a3e"],
+Cell[128650, 3464, 221, 5, 50, "Subitem",ExpressionUUID->"53826979-ab7f-422c-9658-e445ce58d085"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[128908, 3474, 210, 4, 60, "Item",ExpressionUUID->"87c7aa6c-4d57-4660-8369-79c8120831e0"],
+Cell[129121, 3480, 243, 4, 50, "Subitem",ExpressionUUID->"5b7eb700-9a76-4905-8406-ce0b0fd63899"],
+Cell[129367, 3486, 252, 4, 50, "Subitem",ExpressionUUID->"aa4830c5-f196-413a-92fd-657e8f02fe33"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[129668, 3496, 159, 3, 101, "Subsection",ExpressionUUID->"93b0a176-5bd3-4475-9dcf-049c66a021b1"],
+Cell[CellGroupData[{
+Cell[129852, 3503, 184, 3, 84, "Subsubsection",ExpressionUUID->"a9f8415a-2c5a-4f65-88cb-ab2451ca587f"],
+Cell[130039, 3508, 443, 11, 95, "Item",ExpressionUUID->"055e49a7-a116-4ca9-8274-41bd40e7df89"],
+Cell[130485, 3521, 486, 12, 95, "Item",ExpressionUUID->"2dcbffde-61f5-43fc-8275-bfb9d021d04c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[131008, 3538, 181, 3, 84, "Subsubsection",ExpressionUUID->"d5df879c-6f30-45d5-aa7e-4f2acbc22c29"],
+Cell[131192, 3543, 229, 6, 60, "Item",ExpressionUUID->"247fb8f0-f9a3-490a-99ef-172c69d4ec5f"],
+Cell[131424, 3551, 231, 6, 60, "Item",ExpressionUUID->"abef5231-4bb9-4825-b6d2-a789d2b79332"],
+Cell[131658, 3559, 221, 5, 60, "Item",ExpressionUUID->"0b7e18d4-c0d1-4bab-84de-f6ae333fc828"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[131940, 3571, 155, 3, 96, "Section",ExpressionUUID->"230a0735-5307-410e-8d96-e56526f43548"],
+Cell[132098, 3576, 168, 3, 64, "Text",ExpressionUUID->"49817240-1a63-4bad-be3f-8b38377fafa7"],
+Cell[132269, 3581, 176, 6, 106, "Text",ExpressionUUID->"3332de55-0e7e-4b0b-b8c5-df6933d7de56"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
