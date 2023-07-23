@@ -1,0 +1,907 @@
+%% AMS-LaTeX Created with the Wolfram Language : www.wolfram.com
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphics, setspace}
+
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+
+\newcounter{mathematicapage}
+\begin{document}
+
+\title{Wolfram Mathematica Book}
+\author{Chapter 2: A Demo Project}
+\date{}
+\maketitle
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\fbox{$78.9\text{yr}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{CountryData}[\text{{``}UnitedStates{''}},\text{{``}LifeExpectancy{''}}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$80.43\text{yr}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\fbox{$$}\left[\fbox{$\text{life expectancy}$}\right]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$78.9\text{yr}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{CountryData}[\text{All}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{\fbox{$\text{Afghanistan}$},\fbox{$\text{Aland Islands}$},\fbox{$\text{Albania}$},\fbox{$\text{Algeria}$},\fbox{$\text{American Samoa}$},\fbox{$\text{Andorra}$},\fbox{$\text{Angola}$},\fbox{$\text{Anguilla}$},\fbox{$\text{Antigua
+and Barbuda}$},\fbox{$\text{Argentina}$},\fbox{$\text{Armenia}$},\fbox{$\text{Aruba}$},\fbox{$\text{Australia}$},\fbox{$\text{Austria}$},\fbox{$\text{Azerbaijan}$},\fbox{$\text{Bahamas}$},\fbox{$\text{Bahrain}$},\fbox{$\text{Bangladesh}$},\fbox{$\text{Barbados}$},\fbox{$\text{Belarus}$},\fbox{$\text{Belgium}$},\fbox{$\text{Belize}$},\fbox{$\text{Benin}$},\fbox{$\text{Bermuda}$},\fbox{$\text{Bhutan}$},\fbox{$\text{Bolivia}$},\fbox{$\text{Caribbean
+Netherlands}$},\fbox{$\text{Bosnia and Herzegovina}$},\fbox{$\text{Botswana}$},\fbox{$\text{Bouvet Island}$},\fbox{$\text{Brazil}$},\fbox{$\text{British
+Indian Ocean Territory}$},\fbox{$\text{British Virgin Islands}$},\fbox{$\text{Brunei}$},\fbox{$\text{Bulgaria}$},\fbox{$\text{Burkina Faso}$},\fbox{$\text{Burundi}$},\fbox{$\text{Cambodia}$},\fbox{$\text{Cameroon}$},\fbox{$\text{Canada}$},\fbox{$\text{Cape
+Verde}$},\fbox{$\text{Cayman Islands}$},\fbox{$\text{Central African Republic}$},\fbox{$\text{Chad}$},\fbox{$\text{Chile}$},\fbox{$\text{China}$},\fbox{$\text{Christmas
+Island}$},\fbox{$\text{Cocos Keeling Islands}$},\fbox{$\text{Colombia}$},\fbox{$\text{Comoros}$},\fbox{$\text{Cook Islands}$},\fbox{$\text{Costa
+Rica}$},\fbox{$\text{Croatia}$},\fbox{$\text{Cuba}$},\fbox{$\text{Curacao}$},\fbox{$\text{Cyprus}$},\fbox{$\text{Czech Republic}$},\fbox{$\text{Democratic
+Republic of the Congo}$},\fbox{$\text{Denmark}$},\fbox{$\text{Djibouti}$},\fbox{$\text{Dominica}$},\fbox{$\text{Dominican Republic}$},\fbox{$\text{East
+Timor}$},\fbox{$\text{Ecuador}$},\fbox{$\text{Egypt}$},\fbox{$\text{El Salvador}$},\fbox{$\text{Equatorial Guinea}$},\fbox{$\text{Eritrea}$},\fbox{$\text{Estonia}$},\fbox{$\text{Ethiopia}$},\fbox{$\text{Falkland
+Islands}$},\fbox{$\text{Faroe Islands}$},\fbox{$\text{Fiji}$},\fbox{$\text{Finland}$},\fbox{$\text{France}$},\fbox{$\text{French Guiana}$},\fbox{$\text{French
+Polynesia}$},\fbox{$\text{French Southern And Antarctic lands}$},\fbox{$\text{Gabon}$},\fbox{$\text{Gambia}$},\fbox{$\text{Gaza Strip}$},\fbox{$\text{Georgia}$},\fbox{$\text{Germany}$},\fbox{$\text{Ghana}$},\fbox{$\text{Gibraltar}$},\fbox{$\text{Greece}$},\fbox{$\text{Greenland}$},\fbox{$\text{Grenada}$},\fbox{$\text{Guadeloupe}$},\fbox{$\text{Guam}$},\fbox{$\text{Guatemala}$},\fbox{$\text{Guernsey}$},\fbox{$\text{Guinea}$},\fbox{$\text{Guinea-Bissau}$},\fbox{$\text{Guyana}$},\fbox{$\text{Haiti}$},\fbox{$\text{Honduras}$},\fbox{$\text{Hong
+Kong}$},\fbox{$\text{Hungary}$},\fbox{$\text{Iceland}$},\fbox{$\text{India}$},\fbox{$\text{Indonesia}$},\fbox{$\text{Iran}$},\fbox{$\text{Iraq}$},\fbox{$\text{Ireland}$},\fbox{$\text{Isle
+of Man}$},\fbox{$\text{Israel}$},\fbox{$\text{Italy}$},\fbox{$\text{Ivory Coast}$},\fbox{$\text{Jamaica}$},\fbox{$\text{Japan}$},\fbox{$\text{Jersey}$},\fbox{$\text{Jordan}$},\fbox{$\text{Kazakhstan}$},\fbox{$\text{Kenya}$},\fbox{$\text{Kiribati}$},\fbox{$\text{Kosovo}$},\fbox{$\text{Kuwait}$},\fbox{$\text{Kyrgyzstan}$},\fbox{$\text{Laos}$},\fbox{$\text{Latvia}$},\fbox{$\text{Lebanon}$},\fbox{$\text{Lesotho}$},\fbox{$\text{Liberia}$},\fbox{$\text{Libya}$},\fbox{$\text{Liechtenstein}$},\fbox{$\text{Lithuania}$},\fbox{$\text{Luxembourg}$},\fbox{$\text{Macau}$},\fbox{$\text{North
+Macedonia}$},\fbox{$\text{Madagascar}$},\fbox{$\text{Malawi}$},\fbox{$\text{Malaysia}$},\fbox{$\text{Maldives}$},\fbox{$\text{Mali}$},\fbox{$\text{Malta}$},\fbox{$\text{Marshall
+Islands}$},\fbox{$\text{Martinique}$},\fbox{$\text{Mauritania}$},\fbox{$\text{Mauritius}$},\fbox{$\text{Mayotte}$},\fbox{$\text{Mexico}$},\fbox{$\text{Micronesia}$},\fbox{$\text{Moldova}$},\fbox{$\text{Monaco}$},\fbox{$\text{Mongolia}$},\fbox{$\text{Montenegro}$},\fbox{$\text{Montserrat}$},\fbox{$\text{Morocco}$},\fbox{$\text{Mozambique}$},\fbox{$\text{Myanmar}$},\fbox{$\text{Namibia}$},\fbox{$\text{Nauru}$},\fbox{$\text{Nepal}$},\fbox{$\text{Netherlands}$},\fbox{$\text{New
+Caledonia}$},\fbox{$\text{New Zealand}$},\fbox{$\text{Nicaragua}$},\fbox{$\text{Niger}$},\fbox{$\text{Nigeria}$},\fbox{$\text{Niue}$},\fbox{$\text{Norfolk
+Island}$},\fbox{$\text{Northern Mariana Islands}$},\fbox{$\text{North Korea}$},\fbox{$\text{Norway}$},\fbox{$\text{Oman}$},\fbox{$\text{Pakistan}$},\fbox{$\text{Palau}$},\fbox{$\text{Panama}$},\fbox{$\text{Papua
+New Guinea}$},\fbox{$\text{Paraguay}$},\fbox{$\text{Peru}$},\fbox{$\text{Philippines}$},\fbox{$\text{Pitcairn Islands}$},\fbox{$\text{Poland}$},\fbox{$\text{Portugal}$},\fbox{$\text{Puerto
+Rico}$},\fbox{$\text{Qatar}$},\fbox{$\text{Republic of the Congo}$},\fbox{$\text{R{\' e}union}$},\fbox{$\text{Romania}$},\fbox{$\text{Russia}$},\fbox{$\text{Rwanda}$},\fbox{$\text{Saint
+Barthelemy}$},\fbox{$\text{Saint Helena, Ascension and Tristan da Cunha}$},\fbox{$\text{Saint Kitts and Nevis}$},\fbox{$\text{Saint Lucia}$},\fbox{$\text{Saint
+Martin}$},\fbox{$\text{Saint Pierre and Miquelon}$},\fbox{$\text{Saint Vincent and the Grenadines}$},\fbox{$\text{Samoa}$},\fbox{$\text{San Marino}$},\fbox{$\text{S{\~
+a}o Tom{\' e} and Pr{\' \i}ncipe}$},\fbox{$\text{Saudi Arabia}$},\fbox{$\text{Senegal}$},\fbox{$\text{Serbia}$},\fbox{$\text{Seychelles}$},\fbox{$\text{Sierra
+Leone}$},\fbox{$\text{Singapore}$},\fbox{$\text{Sint Maarten}$},\fbox{$\text{Slovakia}$},\fbox{$\text{Slovenia}$},\fbox{$\text{Solomon Islands}$},\fbox{$\text{Somalia}$},\fbox{$\text{South
+Africa}$},\fbox{$\text{South Georgia and the South Sandwich Islands}$},\fbox{$\text{South Korea}$},\fbox{$\text{South Sudan}$},\fbox{$\text{Spain}$},\fbox{$\text{Sri
+Lanka}$},\fbox{$\text{Sudan}$},\fbox{$\text{Suriname}$},\fbox{$\text{Svalbard}$},\fbox{$\text{Eswatini}$},\fbox{$\text{Sweden}$},\fbox{$\text{Switzerland}$},\fbox{$\text{Syria}$},\fbox{$\text{Taiwan}$},\fbox{$\text{Tajikistan}$},\fbox{$\text{Tanzania}$},\fbox{$\text{Thailand}$},\fbox{$\text{Togo}$},\fbox{$\text{Tokelau}$},\fbox{$\text{Tonga}$},\fbox{$\text{Trinidad
+and Tobago}$},\fbox{$\text{Tunisia}$},\fbox{$\text{Turkey}$},\fbox{$\text{Turkmenistan}$},\fbox{$\text{Turks and Caicos Islands}$},\fbox{$\text{Tuvalu}$},\fbox{$\text{Uganda}$},\fbox{$\text{Ukraine}$},\fbox{$\text{United
+Arab Emirates}$},\fbox{$\text{United Kingdom}$},\fbox{$\text{United States}$},\fbox{$\text{United States Minor Outlying Islands}$},\fbox{$\text{United
+States Virgin Islands}$},\fbox{$\text{Uruguay}$},\fbox{$\text{Uzbekistan}$},\fbox{$\text{Vanuatu}$},\fbox{$\text{Vatican City}$},\fbox{$\text{Venezuela}$},\fbox{$\text{Vietnam}$},\fbox{$\text{Wallis
+and Futuna Islands}$},\fbox{$\text{West Bank}$},\fbox{$\text{Western Sahara}$},\fbox{$\text{Yemen}$},\fbox{$\text{Zambia}$},\fbox{$\text{Zimbabwe}$}\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{data}=\text{DeleteCases}[}\\
+\pmb{\text{Table}[\{i, \text{CountryData}[i,\text{{``}LifeExpectancy{''}}]\},\{i,\text{CountryData}[\text{All}]\}],\{\_,\text{$\_$Missing}\}];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Short}[\text{data}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{\{\fbox{$\text{Afghanistan}$},\fbox{$53.25\text{yr}$}\},\{\fbox{$\text{Albania}$},\fbox{$79.23\text{yr}$}\},\{\fbox{$\text{Algeria}$},\fbox{$77.79\text{yr}$}\},\{\fbox{$\text{American
+Samoa}$},\fbox{$75.06\text{yr}$}\},\{\fbox{$\text{Andorra}$},\fbox{$83.23\text{yr}$}\},\{\fbox{$\text{Angola}$},\fbox{$61.71\text{yr}$}\},\{\fbox{$\text{Anguilla}$},\fbox{$82\text{yr}$}\},\{\fbox{$\text{Antigua
+and Barbuda}$},\fbox{$77.55\text{yr}$}\},\{\fbox{$\text{Argentina}$},\fbox{$78.07\text{yr}$}\},\{\fbox{$\text{Armenia}$},\fbox{$75.86\text{yr}$}\},\langle\langle
+214\rangle\rangle ,\{\fbox{$\text{Uzbekistan}$},\fbox{$75.03\text{yr}$}\},\{\fbox{$\text{Vanuatu}$},\fbox{$74.87\text{yr}$}\},\{\fbox{$\text{Venezuela}$},\fbox{$72.22\text{yr}$}\},\{\fbox{$\text{Vietnam}$},\fbox{$75.25\text{yr}$}\},\{\fbox{$\text{Wallis
+and Futuna Islands}$},\fbox{$80.45\text{yr}$}\},\{\fbox{$\text{West Bank}$},\fbox{$76.12\text{yr}$}\},\{\fbox{$\text{Western Sahara}$},\fbox{$63.8\text{yr}$}\},\{\fbox{$\text{Yemen}$},\fbox{$67.18\text{yr}$}\},\{\fbox{$\text{Zambia}$},\fbox{$65.92\text{yr}$}\},\{\fbox{$\text{Zimbabwe}$},\fbox{$62.83\text{yr}$}\}\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{SortBy}[\text{data},\text{Last}]\text{//}\text{Short}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{\{\fbox{$\text{Afghanistan}$},\fbox{$53.25\text{yr}$}\},\{\fbox{$\text{Central African Republic}$},\fbox{$55.07\text{yr}$}\},\{\fbox{$\text{Somalia}$},\fbox{$55.32\text{yr}$}\},\{\fbox{$\text{Mozambique}$},\fbox{$56.49\text{yr}$}\},\{\fbox{$\text{South
+Sudan}$},\fbox{$58.6\text{yr}$}\},\{\fbox{$\text{Chad}$},\fbox{$58.73\text{yr}$}\},\{\fbox{$\text{Lesotho}$},\fbox{$58.9\text{yr}$}\},\{\fbox{$\text{Eswatini}$},\fbox{$59.13\text{yr}$}\},\{\fbox{$\text{Niger}$},\fbox{$59.7\text{yr}$}\},\{\fbox{$\text{Sierra
+Leone}$},\fbox{$60.19\text{yr}$}\},\langle\langle 214\rangle\rangle ,\{\fbox{$\text{Israel}$},\fbox{$83.15\text{yr}$}\},\{\fbox{$\text{Andorra}$},\fbox{$83.23\text{yr}$}\},\{\fbox{$\text{Hong
+Kong}$},\fbox{$83.41\text{yr}$}\},\{\fbox{$\text{Iceland}$},\fbox{$83.45\text{yr}$}\},\{\fbox{$\text{Canada}$},\fbox{$83.62\text{yr}$}\},\{\fbox{$\text{San
+Marino}$},\fbox{$83.68\text{yr}$}\},\{\fbox{$\text{Japan}$},\fbox{$84.65\text{yr}$}\},\{\fbox{$\text{Macau}$},\fbox{$84.81\text{yr}$}\},\{\fbox{$\text{Singapore}$},\fbox{$86.19\text{yr}$}\},\{\fbox{$\text{Monaco}$},\fbox{$89.4\text{yr}$}\}\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Histogram}[\text{data}[[\text{All},2]]]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr1.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{dataAfrica}=\text{DeleteCases}[}\\
+\pmb{\text{Table}[\{i,\text{CountryData}[i,\text{{``}LifeExpectancy{''}}]\},\{i,\text{CountryData}[\text{{``}Africa{''}}]\}],\{\_,\text{$\_$Missing}\}];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{meanAfrica}=\text{Mean}[\text{dataAfrica}[[\text{All},2]]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$66.4587\text{yr}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{dataAsia}=\text{DeleteCases}[}\\
+\pmb{\text{Table}[\{i,\text{CountryData}[i,\text{{``}LifeExpectancy{''}}]\},\{i,\text{CountryData}[\text{{``}Asia{''}}]\}],\{\_,\text{$\_$Missing}\}];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{meanAsia}=\text{Mean}[\text{dataAsia}[[\text{All},2]]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$74.8257\text{yr}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{dataEurope}=\text{DeleteCases}[}\\
+\pmb{\text{Table}[\{i,\text{CountryData}[i,\text{{``}LifeExpectancy{''}}]\},\{i,\text{CountryData}[\text{{``}Europe{''}}]\}],\{\_,\text{$\_$Missing}\}];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{meanEurope} = \text{Mean}[\text{dataEurope}[[\text{All},2]]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$79.971\text{yr}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{BarChart}[\{\text{meanAfrica},\text{meanAsia},\text{meanEurope}\},\text{ChartLabels}\text{-$>$}\{\text{{``}Africa{''}},\text{{``}Asia{''}},\text{{``}Europe{''}}\}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr2.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{dataSA}=\text{DeleteCases}[}\\
+\pmb{\text{Table}[\{i,\text{CountryData}[i,\text{{``}LifeExpectancy{''}}]\},\{i,\text{CountryData}[\text{{``}SouthAmerica{''}}]\}],\{\_,\text{$\_$Missing}\}];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Take}[\text{dataSA},3]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{\{\fbox{$\text{Argentina}$},\fbox{$78.07\text{yr}$}\},\{\fbox{$\text{Bolivia}$},\fbox{$70.7\text{yr}$}\},\{\fbox{$\text{Brazil}$},\fbox{$74.98\text{yr}$}\}\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{BarChart}[\text{dataSA}[[\text{All},2]],\text{ChartLabels}\text{-$>$}\text{dataSA}[[\text{All},1]],\text{BarOrigin}\text{-$>$}\text{Left}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr3.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{data}=\text{Table}[\text{Tooltip}[\{\text{CountryData}[i,\text{{``}LifeExpectancy{''}}],\text{CountryData}[i,\text{{``}GDP{''}}]\},}\\
+\pmb{\text{CountryData}[i,\text{{``}Name{''}}]],\{i,\text{CountryData}[]\}];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{ListLogLogPlot}[\text{data},\text{AxesLabel}\text{-$>$}\{\text{{``}LifeExpectancy{''}},\text{{``}GDP{''}}\}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr4.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{data}=\text{Table}[\text{Tooltip}[\{\text{CountryData}[i,\text{{``}LifeExpectancy{''}}],\text{CountryData}[i,\text{{``}InfantMortalityFraction{''}}]\},}\\
+\pmb{\text{CountryData}[i,\text{{``}Name{''}}]],\{i,\text{CountryData}[]\}];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{ListLogLogPlot}[\text{data},\text{AxesLabel}\text{-$>$}\{\text{{``}LifeExpectancy{''}},\text{{``}InfantMortalityFraction{''}}\}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr5.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[\text{plotFn}[\text{Table}[\text{Tooltip}[\{\text{CountryData}[i,\text{{``}LifeExpectancy{''}}],\text{CountryData}[i,\text{prop}]\},}\\
+\pmb{\text{CountryData}[i,\text{{``}Name{''}}]],\{i,\text{CountryData}[\text{All}]\}],}\\
+\pmb{\text{AxesLabel}\text{-$>$}\{\text{{``}LifeExpectancy{''}},\text{prop}\}],}\\
+\pmb{\{\text{prop},\{\text{{``}InfantMortalityFraction{''}},\text{{``}GDP{''}},\text{{``}LiteracyFraction{''}}\}\},}\\
+\pmb{\{\{\text{plotFn},\text{ListLogLogPlot}\},\{\text{ListPlot},\text{ListLogPlot},\text{ListLogLogPlot}\}\},}\\
+\pmb{\text{SaveDefinitions}\text{-$>$}\text{True}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Clear}[\text{data},\text{dataAfrica},\text{meanAfrica},\text{dataAsia},\text{meanAsia},\text{dataEurope},\text{meanEurope},\text{dataSA}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{2{}^{\wedge}100}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(1267650600228229401496703205376\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{2{}^{\wedge}1000}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{IntegerDigits}[\%]\text{//}\text{Length}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(302\)
+\end{doublespace}
+
+\(\)
+
+\includegraphics{WLG_gr6.eps}
+
+\(\)
+
+\includegraphics{WLG_gr7.eps}
+
+\(\)
+
+\includegraphics{WLG_gr8.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\fbox{$
+\begin{array}{cc}
+ \text{[$\blacksquare$]} & \text{NthDigit}  \\
+\end{array}
+$}[\text{Pi}, \{1, 100\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}[\pi ,\{1,100\}]\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\frac{\text{ArcTan}\left[\frac{-1+2 x}{\sqrt{3}}\right]}{\sqrt{3}}+\frac{1}{3} \text{Log}[1+x]-\frac{1}{6} \text{Log}\left[1-x+x^2\right]\)
+\end{doublespace}
+
+\(\)
+
+\includegraphics{WLG_gr9.eps}
+
+\(\)
+
+\includegraphics{WLG_gr10.eps}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(4.80\times 10^6\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\fbox{$1425861543\text{people}$}\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\fbox{$336495769\text{people}$}\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\text{Molecule}\left[\fbox{$\fbox{$$}$}\right]\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\text{EntityGroup}\left[\left\{\text{EntityInstance}\left[\fbox{$$},\fbox{$1\text{item}$}\right],\text{EntityInstance}\left[\fbox{$$},\fbox{$1\text{serving}$}\right]\right\}\right]\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\fbox{$\$\, 12437.4\text{per }\text{person}\text{per }\text{year}$}\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\fbox{$
+\begin{array}{lr}
+ \text{monthly payment} & \$\, 1342 \\
+ \text{effective interest rate} & 5.116\% \\
+\end{array}
+$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Plot}[\text{Sin}[x],\{x,0,2\text{Pi}\}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr11.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Expand}[(a+b){}^{\wedge}10]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(a^{10}+10 a^9 b+45 a^8 b^2+120 a^7 b^3+210 a^6 b^4+252 a^5 b^5+210 a^4 b^6+120 a^3 b^7+45 a^2 b^8+10 a b^9+b^{10}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Plot}[\text{Sin}[x]+\text{Sin}[2x],\{x,-20,20\}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr12.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Plot}[\{\text{Sin}[x],\text{Cos}[x],\text{Sin}[x]+\text{Cos}[x]\},\{x,-10,20\},}\\
+\pmb{\text{LabelStyle}\text{-$>$}\text{LightBlue}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr13.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Prime}[\text{Range}[1, 100]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113,127,131,137,139,149,151,157,163,167,173,179,181,191,193,197,199,211,223,227,229,233,239,241,251,257,263,269,271,277,281,283,293,307,311,313,317,331,337,347,349,353,359,367,373,379,383,389,397,401,409,419,421,431,433,439,443,449,457,461,463,467,479,487,491,499,503,509,521,523,541\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{ListPlot}[\{2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,}\\
+\pmb{103,107,109,113,127,131,137,139,149,151,157,163,167,173,179,181,191,193,197,199,211,}\\
+\pmb{223,227,229,233,239,241,251,257,263,269,271,277,281,283,293,307,311,313,317,331,337,}\\
+\pmb{347,349,353,359,367,373,379,383,389,397,401,409,419,421,431,433,439,443,449,457,461,}\\
+\pmb{463,467,479,487,491,499,503,509,521,523,541\},\text{PlotTheme}\to \text{{``}Detailed{''}},\text{Filling}\to \text{Axis},\text{Mesh}\to \text{All},}\\
+\pmb{\text{Joined}\to \text{True},\text{FrameStyle}\to \text{Directive}[\text{RGBColor}[0.2,1.,0.27],\text{Thickness}[\text{Large}]]]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr14.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{1234/2468}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\frac{1}{2}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\frac{1234}{2468}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\frac{1}{2}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\frac{1.35}{2.46}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(0.54878\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{N\left[\frac{1234}{5678},4\right]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(0.2173\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(55\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Plot}[x+5,\{x, 1,10\}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr15.eps}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(1180\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\text{False}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Plot3D}[\text{Sin}[x] + \text{Cos}[y], \{x, -6.3, 6.3\}, \{y, -6.3, 6.3\}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr16.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Plot3D}[\text{Sin}[x]+\text{Cos}[y],\{x,-6.3,6.3\},\{y,-6.3,6.3\},\text{Mesh}\to \text{None}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr17.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Row}[\{\text{{``}item1{''}},\text{{``}item2{''}},\text{{``}item3{''}}\},\text{Spacer}[10]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\text{item1}\text{item2}\text{item3}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Style}[\text{Grid}[\{}\\
+\pmb{\{\text{Style}[a,\text{Bold},\text{Red}],b,c\},}\\
+\pmb{\{d,e,f\},}\\
+\pmb{\{g,h,i\}}\\
+\pmb{\},\text{Alignment}\text{-$>$}\text{Left},\text{Frame}\text{-$>$}\text{True},\text{Dividers}\text{-$>$}\text{Center}],}\\
+\pmb{\text{FontFamily}\text{-$>$}\text{{``}Times New Roman{''}}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\begin{array}{l|ll}
+ a & b & c \\
+\hline
+ d & e & f \\
+ g & h & i \\
+\end{array}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Row}[\text{Table}[i,\{i,0,5\}],\text{Spacer}[10]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(012345\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Row}[\text{Table}[\text{Sin}[x t],\{x,0,10\},\{t,1,6\}],\text{Spacer}[10]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{0,0,0,0,0,0\}\{\text{Sin}[1],\text{Sin}[2],\text{Sin}[3],\text{Sin}[4],\text{Sin}[5],\text{Sin}[6]\}\{\text{Sin}[2],\text{Sin}[4],\text{Sin}[6],\text{Sin}[8],\text{Sin}[10],\text{Sin}[12]\}\{\text{Sin}[3],\text{Sin}[6],\text{Sin}[9],\text{Sin}[12],\text{Sin}[15],\text{Sin}[18]\}\{\text{Sin}[4],\text{Sin}[8],\text{Sin}[12],\text{Sin}[16],\text{Sin}[20],\text{Sin}[24]\}\{\text{Sin}[5],\text{Sin}[10],\text{Sin}[15],\text{Sin}[20],\text{Sin}[25],\text{Sin}[30]\}\{\text{Sin}[6],\text{Sin}[12],\text{Sin}[18],\text{Sin}[24],\text{Sin}[30],\text{Sin}[36]\}\{\text{Sin}[7],\text{Sin}[14],\text{Sin}[21],\text{Sin}[28],\text{Sin}[35],\text{Sin}[42]\}\{\text{Sin}[8],\text{Sin}[16],\text{Sin}[24],\text{Sin}[32],\text{Sin}[40],\text{Sin}[48]\}\{\text{Sin}[9],\text{Sin}[18],\text{Sin}[27],\text{Sin}[36],\text{Sin}[45],\text{Sin}[54]\}\{\text{Sin}[10],\text{Sin}[20],\text{Sin}[30],\text{Sin}[40],\text{Sin}[50],\text{Sin}[60]\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Grid}[\{}\\
+\pmb{\text{Prime}[\text{Range}[1,4]],}\\
+\pmb{\text{Prime}[\text{Range}[5,8]],}\\
+\pmb{\text{Prime}[\text{Range}[9,12]],}\\
+\pmb{\text{Prime}[\text{Range}[13,16]]}\\
+\pmb{\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\begin{array}{cccc}
+ 2 & 3 & 5 & 7 \\
+ 11 & 13 & 17 & 19 \\
+ 23 & 29 & 31 & 37 \\
+ 41 & 43 & 47 & 53 \\
+\end{array}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{FullForm}[a b + c d]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\text{Plus}[\text{Times}[a,b],\text{Times}[c,d]]\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{TreeForm}[a b + c d]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Table}[\pi ,100]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi
+,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi
+,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi
+,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi ,\pi \}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Table}[\{i,i{}^{\wedge}2\},\{i,1,10\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{\{1,1\},\{2,4\},\{3,9\},\{4,16\},\{5,25\},\{6,36\},\{7,49\},\{8,64\},\{9,81\},\{10,100\}\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\pi  \text{squared} \text{is} N\left[\pi ^2\right]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(31.0063 \text{is} \text{squared}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{{``}$\pi $ squared is: {''}}<>\text{ToString}\left[N\left[\pi ^2\right]\right]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\text{$\pi $ squared is: 9.8696}\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\fbox{$2\text{ft}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{2\fbox{$\text{ft}$}+3\fbox{$m$}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$\frac{1504}{127}\text{ft}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Quantity}[2,\text{{``}Feet{''}}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$2\text{ft}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Quantity}[2,\text{{``}Feet{''}}]+\text{Quantity}[3,\text{{``}Meters{''}}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$\frac{1504}{127}\text{ft}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{UnitConvert}\left[\text{Quantity}\left[\frac{1504}{127},\text{{``}Feet{''}}\right],\text{{``}Meters{''}}\right]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$\frac{2256}{625}\text{m}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{UnitConvert}[\%,\text{{``}Meters{''}}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$\frac{2256}{625}\text{m}$}\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\text{True}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{[\text{{``}Elevation{''}}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$27.\text{m}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Quantity}[7,\text{{``}days{''}}]+\text{Quantity}[2,\text{{``}weeks{''}}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$21\text{days}$}\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\fbox{$21\text{days}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{2}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$2\text{wk}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Today}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$\text{Fri 21 Jul 2023}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{DateList}[\text{DateObject}[\{2016,7,15\}]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{2016,7,15,0,0,0.\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{DatePlus}[\text{Today},7]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$\text{Fri 28 Jul 2023}$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{DayName}[\text{DatePlus}[\text{Today},\text{Quantity}[5,\text{{``}months{''}}]]]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\text{Thursday}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{f[\text{x$\_$}]\text{:=}x^2}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{f[2]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(4\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{f[\pi ]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pi ^2\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{f[1.2345]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(1.52399\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{f[\{1,2,3\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\{1,4,9\}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{h[\text{a$\_$},\text{b$\_$}]\text{:=}a^b}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{h[10,10]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(10000000000\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Clear}[x,a,f,b]}\)
+\end{doublespace}
+
+\(\)
+
+\begin{doublespace}
+\noindent\(\begin{array}{l}
+ 
+\begin{array}{l}
+ 
+\begin{array}{|l|l|}
+\hline
+  &  \\
+\hline
+  &  \\
+\hline
+  &  \\
+\hline
+  &  \\
+\hline
+  &  \\
+\hline
+\end{array}
+ \\
+\end{array}
+ \\
+ \fbox{$$} \\
+\end{array}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Plot}[\text{Sin}[x],\{x,0,2\pi \}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr18.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot}[\text{Sin}[\text{frequency} * x],\{x,0,2 \}],}\\
+\pmb{\{\text{frequency},1,5\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot}[\text{function}[f * x +\text{phase}],\{x,0,2\}],}\\
+\pmb{\{f,1,5\},}\\
+\pmb{\{\text{phase},1,10\},}\\
+\pmb{\{\text{function},\{\text{Sin},\text{Cos},\text{Tan},\text{Csc},\text{Sec},\text{Cot}\},\text{ControlType}\text{-$>$}\text{SetterBar}\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Expand}[(a+b){}^{\wedge}n],\{n,2,10,1\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot}[a *\text{Sin}[x],\{x,0,2\text{Pi}\},}\\
+\pmb{\text{PlotRange}\text{-$>$}\{-11,11\}],}\\
+\pmb{\{a,1,10\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot3D}[\text{Sin}[a x y],\{x,-2,2\},\{y,-2,2\},}\\
+\pmb{\text{PerformanceGoal}\text{-$>$}\text{{``}Quality{''}}],}\\
+\pmb{\{a,1,10\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot}[a*\text{fn}[f * x+\text{ps}],\{x, 0,2\text{Pi}\},}\\
+\pmb{\text{PlotRange}\text{-$>$}6,}\\
+\pmb{\text{PlotLabel}\text{-$>$}\text{{``}Sin({''}}<>\text{ToString}[f]<>\text{{``}x + {''}}<>\text{ToString}[\text{ps}]<>\text{{``}){''}}],}\\
+\pmb{\{\{f,1,\text{{``}Frequency{''}}\},1,5,\text{Appearance}\text{-$>$}\text{{``}Labeled{''}}\},}\\
+\pmb{\{\{a,3,\text{{``}Amplitude{''}}\},1,5,\text{Appearance}\text{-$>$}\text{{``}Labeled{''}}\},}\\
+\pmb{\{\{\text{ps},1,\text{{``}Phase Shift{''}}\},1,10,\text{Appearance}\text{-$>$}\text{{``}Labeled{''}}\},}\\
+\pmb{\{\{\text{fn},\text{Sin},\text{{``}Function{''}}\},\{\text{Sin},\text{Cos},\text{Tan},\text{Csc},\text{Sec},\text{Cot}\}\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot}[\text{Sin}[f x],\{x,0,2\text{Pi}\},}\\
+\pmb{\text{PlotLabel}\text{-$>$}\text{{``}Plot of Sin({''}}<>\text{ToString}[f]<>\text{{``}x){''}}],}\\
+\pmb{\{\{f,1,\text{{``}Frequency{''}}\},1,5,\text{Appearance}\text{-$>$}\text{{``}Labeled{''}}\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{f[\text{x$\_$}]\text{:=}2x{}^{\wedge}2+2x+1}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot}[f[a x],\{x,-4,4\},}\\
+\pmb{\text{PlotRange}\text{-$>$}\{0,25\}],}\\
+\pmb{\{a,-1,1\},}\\
+\pmb{\text{Initialization}\text{:$>$}(f[\text{x$\_$}]\text{:=}2x{}^{\wedge}2+2x+1)]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot}[f[a x],\{x,-4,4\},}\\
+\pmb{\text{PlotRange}\text{-$>$}\{0,25\}],}\\
+\pmb{\{a,-1,1\},}\\
+\pmb{\text{SaveDefinitions}\text{-$>$}\text{True}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Clear}[f]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\{x,x{}^{\wedge}2+1,x{}^{\wedge}3+1\},}\\
+\pmb{\{x,1,10,1\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{Plot}[\{c x{}^{\wedge}2+3d x-1,2c x{}^{\wedge}2-d x+3\},\{x,-5,5\},}\\
+\pmb{\text{PlotRange}\text{-$>$}\{-5,100\}],}\\
+\pmb{\{c,1,20\},}\\
+\pmb{\{d,0,20\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{ThermometerGauge}[10,\{0,50\}]}\)
+\end{doublespace}
+
+\includegraphics{WLG_gr19.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[}\\
+\pmb{\text{ThermometerGauge}[10x,\{0,50\}],}\\
+\pmb{\{x,0,5\}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\fbox{$$}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{}}\)
+\end{doublespace}
+
+\end{document}
